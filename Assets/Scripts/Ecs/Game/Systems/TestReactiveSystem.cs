@@ -13,7 +13,7 @@ namespace Ecs.Game.Systems
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) =>
             context.CreateCollector(GameMatcher.TestFloat);
 
-        protected override bool Filter(GameEntity entity) => entity.HasTestFloat && !entity.IsDestroyed;
+        protected override bool Filter(GameEntity entity) => entity.HasTestFloat && entity.TestFloat.Value > 0 && !entity.IsDestroyed;
 
         protected override void Execute(List<GameEntity> entities)
         {
