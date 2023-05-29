@@ -22,6 +22,10 @@ public partial class GameEntity
 		{
 			CopyTestFloatTo(TestFloat);
 		}
+		else if (component is Ecs.Game.Components.TestCounterComponent TestCounter)
+		{
+			CopyTestCounterTo(TestCounter);
+		}
 		else if (component is Ecs.Game.Components.TestUniqueComponent TestUnique)
 		{
 			IsTestUnique = true;
@@ -30,6 +34,10 @@ public partial class GameEntity
 		{
 			CopyLinkTo(Link);
 		}
+		else if (component is Ecs.Common.Components.UidComponent Uid)
+		{
+			CopyUidTo(Uid);
+		}
 		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
 		{
 			IsDestroyed = true;
@@ -37,6 +45,10 @@ public partial class GameEntity
 		else if (component is TestFloatAddedListenerComponent TestFloatAddedListener)
 		{
 			CopyTestFloatAddedListenerTo(TestFloatAddedListener);
+		}
+		else if (component is TestCounterAddedListenerComponent TestCounterAddedListener)
+		{
+			CopyTestCounterAddedListenerTo(TestCounterAddedListener);
 		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{

@@ -15,22 +15,28 @@ public static class GameComponentsLookup
 {
 	public const int Destroyed = 0;
 	public const int Link = 1;
-	public const int TestFloat = 2;
-	public const int TestUnique = 3;
-	public const int GameDestroyedAddedListener = 4;
-	public const int LinkRemovedListener = 5;
-	public const int TestFloatAddedListener = 6;
+	public const int Uid = 2;
+	public const int TestCounter = 3;
+	public const int TestFloat = 4;
+	public const int TestUnique = 5;
+	public const int GameDestroyedAddedListener = 6;
+	public const int LinkRemovedListener = 7;
+	public const int TestCounterAddedListener = 8;
+	public const int TestFloatAddedListener = 9;
 
-	public const int TotalComponents = 7;
+	public const int TotalComponents = 10;
 
 	public static readonly string[] ComponentNames =
 	{
 		"Destroyed",
 		"Link",
+		"Uid",
+		"TestCounter",
 		"TestFloat",
 		"TestUnique",
 		"GameDestroyedAddedListener",
 		"LinkRemovedListener",
+		"TestCounterAddedListener",
 		"TestFloatAddedListener"
 	};
 
@@ -38,10 +44,13 @@ public static class GameComponentsLookup
 	{
 		typeof(Ecs.Common.Components.DestroyedComponent),
 		typeof(Ecs.Common.Components.LinkComponent),
+		typeof(Ecs.Common.Components.UidComponent),
+		typeof(Ecs.Game.Components.TestCounterComponent),
 		typeof(Ecs.Game.Components.TestFloatComponent),
 		typeof(Ecs.Game.Components.TestUniqueComponent),
 		typeof(GameDestroyedAddedListenerComponent),
 		typeof(LinkRemovedListenerComponent),
+		typeof(TestCounterAddedListenerComponent),
 		typeof(TestFloatAddedListenerComponent)
 	};
 
@@ -49,11 +58,14 @@ public static class GameComponentsLookup
 	{
 		{ typeof(Ecs.Common.Components.DestroyedComponent), 0 },
 		{ typeof(Ecs.Common.Components.LinkComponent), 1 },
-		{ typeof(Ecs.Game.Components.TestFloatComponent), 2 },
-		{ typeof(Ecs.Game.Components.TestUniqueComponent), 3 },
-		{ typeof(GameDestroyedAddedListenerComponent), 4 },
-		{ typeof(LinkRemovedListenerComponent), 5 },
-		{ typeof(TestFloatAddedListenerComponent), 6 }
+		{ typeof(Ecs.Common.Components.UidComponent), 2 },
+		{ typeof(Ecs.Game.Components.TestCounterComponent), 3 },
+		{ typeof(Ecs.Game.Components.TestFloatComponent), 4 },
+		{ typeof(Ecs.Game.Components.TestUniqueComponent), 5 },
+		{ typeof(GameDestroyedAddedListenerComponent), 6 },
+		{ typeof(LinkRemovedListenerComponent), 7 },
+		{ typeof(TestCounterAddedListenerComponent), 8 },
+		{ typeof(TestFloatAddedListenerComponent), 9 }
 	};
 
 	/// <summary>

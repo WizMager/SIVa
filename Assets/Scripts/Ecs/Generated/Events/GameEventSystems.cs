@@ -13,6 +13,7 @@ public sealed class GameEventSystems : Feature
 	{
 		Add(new GameDestroyedAddedEventSystem(contexts)); // priority: 0
 		Add(new LinkRemovedEventSystem(contexts)); // priority: 0
+		Add(new TestCounterAddedEventSystem(contexts)); // priority: 0
 		Add(new TestFloatAddedEventSystem(contexts)); // priority: 0
 	}
 }

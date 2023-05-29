@@ -13,22 +13,22 @@ namespace Ecs.Game.Systems
         private readonly IGroup<GameEntity> _testGroup;
 
         private readonly GameContext _game;
-        private readonly ITimeProviderService _timeProviderService;
+        private readonly ITimeProvider _timeProvider;
 
         public TestUpdateSystem(
             GameContext game,
-            ITimeProviderService timeProviderService
+            ITimeProvider timeProvider
             )
         {
             _game = game;
-            _timeProviderService = timeProviderService;
+            _timeProvider = timeProvider;
 
             _testGroup = _game.GetGroup(GameMatcher.AllOf(GameMatcher.TestFloat).NoneOf(GameMatcher.Destroyed));
         }
         
         public void Update()
         {
-            Debug.Log($"[UpdateSystem] Delta time is {_timeProviderService.DeltaTime}");
+            Debug.Log($"[UpdateSystem] Delta time is {_timeProvider.DeltaTime}");
             
             AddToUnique();
 
@@ -38,7 +38,7 @@ namespace Ecs.Game.Systems
             foreach (var entity in testEntities)
             {
                 var floatValue = entity.TestFloat.Value; 
-                entity.ReplaceTestFloat(floatValue + _timeProviderService.DeltaTime);
+                entity.ReplaceTestFloat(floatValue + _timeProvider.DeltaTime);
             }
             
             ListPool.Despawn(testEntities);
@@ -51,7 +51,7 @@ namespace Ecs.Game.Systems
             if (!unique.HasTestFloat) return;
             
             var floatValue = unique.TestFloat.Value;
-            unique.ReplaceTestFloat(floatValue + _timeProviderService.DeltaTime);
+            unique.ReplaceTestFloat(floatValue + _timeProvider.DeltaTime);
         }
     }
 }

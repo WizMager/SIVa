@@ -18,7 +18,11 @@ public partial class ActionEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
+		if (component is Ecs.Action.Components.TestCollideComponent TestCollide)
+		{
+			CopyTestCollideTo(TestCollide);
+		}
+		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
 		{
 			IsDestroyed = true;
 		}
