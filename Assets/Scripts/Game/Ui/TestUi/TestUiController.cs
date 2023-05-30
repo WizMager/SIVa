@@ -1,7 +1,5 @@
 ﻿using Ecs.Scheduler.Extensions;
-using Scheduler.Services.EcsTimerSequence;
 using SimpleUi.Abstracts;
-using UnityEngine;
 using Zenject;
 
 namespace Game.Ui.TestUi
@@ -26,7 +24,6 @@ namespace Game.Ui.TestUi
             _scheduler.CreateTimerAction(() =>
             {
                 _game.TestCounterEntity.AddTestCounterAddedListener(this);
-                Debug.LogError(_game.TestCounter.Value);
             }, 0.1f);
             
             //sequencer dont created in zenject initialize method

@@ -22,9 +22,10 @@ public static class GameComponentsLookup
 	public const int GameDestroyedAddedListener = 6;
 	public const int LinkRemovedListener = 7;
 	public const int TestCounterAddedListener = 8;
-	public const int TestFloatAddedListener = 9;
+	public const int TestCounterRemovedListener = 9;
+	public const int TestFloatAddedListener = 10;
 
-	public const int TotalComponents = 10;
+	public const int TotalComponents = 11;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -37,6 +38,7 @@ public static class GameComponentsLookup
 		"GameDestroyedAddedListener",
 		"LinkRemovedListener",
 		"TestCounterAddedListener",
+		"TestCounterRemovedListener",
 		"TestFloatAddedListener"
 	};
 
@@ -51,6 +53,7 @@ public static class GameComponentsLookup
 		typeof(GameDestroyedAddedListenerComponent),
 		typeof(LinkRemovedListenerComponent),
 		typeof(TestCounterAddedListenerComponent),
+		typeof(TestCounterRemovedListenerComponent),
 		typeof(TestFloatAddedListenerComponent)
 	};
 
@@ -65,7 +68,8 @@ public static class GameComponentsLookup
 		{ typeof(GameDestroyedAddedListenerComponent), 6 },
 		{ typeof(LinkRemovedListenerComponent), 7 },
 		{ typeof(TestCounterAddedListenerComponent), 8 },
-		{ typeof(TestFloatAddedListenerComponent), 9 }
+		{ typeof(TestCounterRemovedListenerComponent), 9 },
+		{ typeof(TestFloatAddedListenerComponent), 10 }
 	};
 
 	/// <summary>

@@ -16,18 +16,18 @@ namespace Installers.Game
             BindWindows();
         }
 
+        private void BindInitializeSystems()
+        {
+            Container.BindInterfacesAndSelfTo<TestInitializeSystem>().AsSingle();
+        }
+        
         private void BindSystems()
         {
             Container.BindInterfacesAndSelfTo<TestCollideSystem>().AsSingle();
             Container.BindInterfacesAndSelfTo<TestUpdateSystem>().AsSingle();
             Container.BindInterfacesAndSelfTo<TestReactiveSystem>().AsSingle();
         }
-
-        private void BindInitializeSystems()
-        {
-            Container.BindInterfacesAndSelfTo<TestInitializeSystem>().AsSingle();
-        }
-
+        
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<TimeProvider>().AsSingle();

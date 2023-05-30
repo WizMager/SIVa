@@ -50,6 +50,10 @@ public partial class GameEntity
 		{
 			CopyTestCounterAddedListenerTo(TestCounterAddedListener);
 		}
+		else if (component is TestCounterRemovedListenerComponent TestCounterRemovedListener)
+		{
+			CopyTestCounterRemovedListenerTo(TestCounterRemovedListener);
+		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{
 			CopyLinkRemovedListenerTo(LinkRemovedListener);

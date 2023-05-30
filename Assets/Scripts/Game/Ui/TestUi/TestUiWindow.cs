@@ -4,7 +4,7 @@ namespace Game.Ui.TestUi
 {
     public class TestUiWindow : WindowBase
     {
-        public override string Name => "TestWindow";
+        public override string Name => "TestUiWindow";
         
         protected override void AddControllers()
         {

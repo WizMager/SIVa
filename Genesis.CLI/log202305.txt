@@ -10658,3 +10658,141 @@ EntitasRedux.Core.Plugins.DuplicateComponentNameException: Two or more component
 2023-05-29 22:49:38.641 +03:00 [VRB] Post Processing Convert Line Endings 94,12%%
 2023-05-29 22:49:38.642 +03:00 [VRB] Post Processing Merge files 97,06%%
 2023-05-29 22:49:38.642 +03:00 [VRB] Post Processing Write Code Gen Files to Disk 100,00%%
+2023-05-30 20:40:57.320 +03:00 [VRB] Solution found at C:\UnityProjects\SIVa\SIVa.sln, attempting to load.
+2023-05-30 20:41:00.148 +03:00 [VRB] Roslyn solution found, beginning parsing.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project UnityEngine.TestRunner.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.Timeline.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Assembly-CSharp.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.Burst.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.Mathematics.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.VisualScripting.State.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.TextMeshPro.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.SharpZipLib.Utils.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.VisualScripting.Core.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Assembly-CSharp-firstpass.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.PlasticSCM.Editor.
+2023-05-30 20:41:00.153 +03:00 [VRB] Inspecting project Unity.VisualScripting.Flow.
+2023-05-30 20:41:00.849 +03:00 [VRB] Inspecting project Unity.VisualScripting.Core.Editor.
+2023-05-30 20:41:00.879 +03:00 [VRB] Inspecting project Unity.Timeline.Editor.
+2023-05-30 20:41:00.879 +03:00 [VRB] Inspecting project Unity.TextMeshPro.Editor.
+2023-05-30 20:41:00.880 +03:00 [VRB] Inspecting project Unity.VisualScripting.SettingsProvider.Editor.
+2023-05-30 20:41:01.043 +03:00 [VRB] Inspecting project UnityEditor.TestRunner.
+2023-05-30 20:41:01.245 +03:00 [VRB] Inspecting project Unity.VisualScripting.Flow.Editor.
+2023-05-30 20:41:01.477 +03:00 [VRB] Inspecting project Unity.Rider.Editor.
+2023-05-30 20:41:01.580 +03:00 [VRB] Inspecting project Unity.Burst.CodeGen.
+2023-05-30 20:41:01.604 +03:00 [VRB] Inspecting project Unity.VSCode.Editor.
+2023-05-30 20:41:01.607 +03:00 [VRB] Inspecting project Unity.VisualStudio.Editor.
+2023-05-30 20:41:01.610 +03:00 [VRB] Inspecting project Unity.Settings.Editor.
+2023-05-30 20:41:01.652 +03:00 [VRB] Inspecting project Unity.VisualScripting.State.Editor.
+2023-05-30 20:41:01.652 +03:00 [VRB] Inspecting project Unity.CollabProxy.Editor.
+2023-05-30 20:41:01.660 +03:00 [VRB] Inspecting project Unity.Searcher.Editor.
+2023-05-30 20:41:01.674 +03:00 [VRB] Inspecting project Unity.Burst.Editor.
+2023-05-30 20:41:01.674 +03:00 [VRB] Inspecting project Unity.Mathematics.Editor.
+2023-05-30 20:41:01.681 +03:00 [VRB] Inspecting project Unity.VisualScripting.Shared.Editor.
+2023-05-30 20:41:01.715 +03:00 [VRB] Inspecting project Unity.Burst.Tests.UnitTests.
+2023-05-30 20:41:01.723 +03:00 [VRB] Inspecting project Unity.Mathematics.Tests.
+2023-05-30 20:41:01.723 +03:00 [VRB] Inspecting project Unity.TextMeshPro.Tests.
+2023-05-30 20:41:01.724 +03:00 [VRB] Inspecting project Unity.Burst.Editor.Tests.
+2023-05-30 20:41:01.724 +03:00 [VRB] Inspecting project Unity.Searcher.EditorTests.
+2023-05-30 20:41:01.724 +03:00 [VRB] Inspecting project DocCodeExamples.
+2023-05-30 20:41:01.724 +03:00 [VRB] Inspecting project ICSharpCode.SharpZipLib.Tests.
+2023-05-30 20:41:01.725 +03:00 [VRB] Inspecting project Unity.TextMeshPro.Editor.Tests.
+2023-05-30 20:41:01.725 +03:00 [VRB] Inspecting project Unity.Settings.Tests.
+2023-05-30 20:41:01.725 +03:00 [VRB] Inspecting project Assembly-CSharp-Editor-firstpass.
+2023-05-30 20:41:01.725 +03:00 [VRB] Inspecting project OverloadedFunctionPointers.
+2023-05-30 20:41:01.725 +03:00 [VRB] Inspecting project SeparateAssembly.
+2023-05-30 20:41:01.973 +03:00 [VRB] Found a total of 4007.
+2023-05-30 20:41:01.974 +03:00 [VRB] Solution loaded, 4007 TypeSymbols Discovered
+2023-05-30 20:41:01.978 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Core.dll].
+2023-05-30 20:41:01.978 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Core.dll]
+2023-05-30 20:41:01.979 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll].
+2023-05-30 20:41:01.979 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Core.Plugins.dll]
+2023-05-30 20:41:01.981 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll].
+2023-05-30 20:41:01.981 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Unity.Blueprint.Plugins.dll]
+2023-05-30 20:41:01.982 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll].
+2023-05-30 20:41:01.982 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\EntitasRedux.Unity.VisualDebugging.Plugins.dll]
+2023-05-30 20:41:01.982 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Core.dll].
+2023-05-30 20:41:01.982 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Core.dll]
+2023-05-30 20:41:01.983 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll].
+2023-05-30 20:41:01.983 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Core.Plugin.dll]
+2023-05-30 20:41:01.984 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Plugin.dll].
+2023-05-30 20:41:01.984 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Plugin.dll]
+2023-05-30 20:41:01.984 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Shared.dll].
+2023-05-30 20:41:01.984 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Shared.dll]
+2023-05-30 20:41:01.985 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll].
+2023-05-30 20:41:01.985 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Unity.Factory.dll]
+2023-05-30 20:41:01.986 +03:00 [VRB] Attempting to load Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll].
+2023-05-30 20:41:01.986 +03:00 [VRB] Loading Assembly [C:\UnityProjects\SIVa\Genesis.CLI\Plugins\Genesis.Unity.Factory.Plugin.dll]
+2023-05-30 20:41:01.987 +03:00 [VRB] Loaded 10 plugins assemblies.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: CleanupDestroyEntitySystemGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: CleanupRemoveComponentSystemGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextCleanupFeatureGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextCleanupSystemsGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentContextApiGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentEntityApiGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentEntityApiInterfaceGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentLookupGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentMatcherApiGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ComponentDataProvider.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextAttributeGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextMatcherGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextsGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextDataProvider.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EntityGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EntityIndexGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EntityIndexDataProvider.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EventEntityApiGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EventListenerComponentGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EventListenerInterfaceGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EventSystemGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: EventSystemsGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: BlueprintClassGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ContextObserverGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: FeatureClassGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: AddFileHeaderPostProcessor.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: CleanTargetDirectoryPostProcessor.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: MergeFilesPostProcessor.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: NewLinePostProcessor.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: WriteToDiskPostProcessor.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ScriptableFactoryCodeGenerator.
+2023-05-30 20:41:02.142 +03:00 [VRB] Plugin loaded: ScriptableFactoryDataProvider.
+2023-05-30 20:41:02.142 +03:00 [VRB] Using Base64 Configs...
+2023-05-30 20:41:02.200 +03:00 [VRB] Loaded 1 GenesisConfigs. Starting code generation.
+2023-05-30 20:41:02.202 +03:00 [VRB] Setting absolute output path to C:/UnityProjects/SIVa/Assets/Scripts/Ecs/Generated.
+2023-05-30 20:41:02.211 +03:00 [VRB] Generating code from GenesisSettings.
+2023-05-30 20:41:02.257 +03:00 [VRB] Creating model Component 2,94%%
+2023-05-30 20:41:02.948 +03:00 [VRB] Creating model Context 5,88%%
+2023-05-30 20:41:02.948 +03:00 [VRB] Creating model Entity Index 8,82%%
+2023-05-30 20:41:02.962 +03:00 [VRB] Creating model Scriptable Factory Data 11,76%%
+2023-05-30 20:41:02.981 +03:00 [VRB] Creating files Cleanup Destroy Entity System 14,71%%
+2023-05-30 20:41:02.982 +03:00 [VRB] Creating files Cleanup Remove Component System 17,65%%
+2023-05-30 20:41:02.982 +03:00 [VRB] Creating files Component (Context API) 20,59%%
+2023-05-30 20:41:02.984 +03:00 [VRB] Creating files Component (Entity API) 23,53%%
+2023-05-30 20:41:02.995 +03:00 [VRB] Creating files Component (Entity API Interface) 26,47%%
+2023-05-30 20:41:02.996 +03:00 [VRB] Creating files Component 29,41%%
+2023-05-30 20:41:02.996 +03:00 [VRB] Creating files Component (Lookup) 32,35%%
+2023-05-30 20:41:02.999 +03:00 [VRB] Creating files Component (Matcher API) 35,29%%
+2023-05-30 20:41:03.000 +03:00 [VRB] Creating files Context (Attribute) 38,24%%
+2023-05-30 20:41:03.000 +03:00 [VRB] Creating files Context Cleanup Feature Generator 41,18%%
+2023-05-30 20:41:03.001 +03:00 [VRB] Creating files Context Cleanup Systems Generator 44,12%%
+2023-05-30 20:41:03.002 +03:00 [VRB] Creating files Context 47,06%%
+2023-05-30 20:41:03.002 +03:00 [VRB] Creating files Context (Matcher API) 50,00%%
+2023-05-30 20:41:03.002 +03:00 [VRB] Creating files Contexts 52,94%%
+2023-05-30 20:41:03.003 +03:00 [VRB] Creating files Entity 55,88%%
+2023-05-30 20:41:03.003 +03:00 [VRB] Creating files Entity Index 58,82%%
+2023-05-30 20:41:03.004 +03:00 [VRB] Creating files Event (Entity API) 61,76%%
+2023-05-30 20:41:03.004 +03:00 [VRB] Creating files Event (Listener Component) 64,71%%
+2023-05-30 20:41:03.005 +03:00 [VRB] Creating files Event (Listener Interface) 67,65%%
+2023-05-30 20:41:03.006 +03:00 [VRB] Creating files Event (System) 70,59%%
+2023-05-30 20:41:03.006 +03:00 [VRB] Creating files Event (Systems) 73,53%%
+2023-05-30 20:41:03.014 +03:00 [VRB] Creating files Blueprint Class Generator 76,47%%
+2023-05-30 20:41:03.015 +03:00 [VRB] Creating files Context Observer 79,41%%
+2023-05-30 20:41:03.016 +03:00 [VRB] Creating files Feature Class 82,35%%
+2023-05-30 20:41:03.016 +03:00 [VRB] Creating files Scriptable Factory Lookup 85,29%%
+2023-05-30 20:41:03.016 +03:00 [VRB] Post Processing Add File Header 88,24%%
+2023-05-30 20:41:03.017 +03:00 [VRB] Post Processing Clean Target Directory 91,18%%
+2023-05-30 20:41:03.026 +03:00 [VRB] Post Processing Convert Line Endings 94,12%%
+2023-05-30 20:41:03.027 +03:00 [VRB] Post Processing Merge files 97,06%%
+2023-05-30 20:41:03.028 +03:00 [VRB] Post Processing Write Code Gen Files to Disk 100,00%%
