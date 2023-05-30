@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Game.Ui;
 using JCMG.EntitasRedux;
 using Zenject;
 
@@ -12,7 +13,8 @@ namespace Core.Systems.Impl
         private readonly List<ILateSystem> _late = new();
         private readonly List<IFixedSystem> _fixed = new();
         private readonly List<IResetable> _resetables;
-        
+        private readonly List<IUiInitialize> _uiInitializes;
+
         private bool _isInitialized;
         private bool _isPaused;
         
@@ -20,12 +22,14 @@ namespace Core.Systems.Impl
             [InjectLocal] List<ISystem> systems,
             [InjectLocal] Contexts contexts,
             [InjectLocal] GameFeature feature,
-            [InjectLocal] List<IResetable> resetables
+            [InjectLocal] List<IResetable> resetables,
+            [InjectLocal] List<IUiInitialize> uiInitializes
             )
         {
             _contexts = contexts; 
             _feature = feature;
             _resetables = resetables;
+            _uiInitializes = uiInitializes;
             
             for (int i = 0; i < systems.Count; i++)
             {
@@ -47,6 +51,12 @@ namespace Core.Systems.Impl
                 return;
             
             _feature.Initialize();
+
+            foreach (var uiInitialize in _uiInitializes)
+            {
+                uiInitialize.Initialize();
+            }
+            
             _isInitialized = true;
         }
         

@@ -11,9 +11,9 @@ namespace Installers.Game
         public override void InstallBindings()
         {
             BindInitializeSystems();
+            BindWindows();
             BindSystems();
             BindServices();
-            BindWindows();
         }
 
         private void BindInitializeSystems()

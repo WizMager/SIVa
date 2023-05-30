@@ -1,38 +1,21 @@
-﻿using Ecs.Scheduler.Extensions;
-using SimpleUi.Abstracts;
-using Zenject;
+﻿using SimpleUi.Abstracts;
 
 namespace Game.Ui.TestUi
 {
     public class TestUiController : UiController<TestUiView>,
-        IInitializable,
+        IUiInitialize,
         ITestCounterAddedListener
     {
         private readonly GameContext _game;
-        private readonly SchedulerContext _scheduler;
         
-        public TestUiController(
-            GameContext game,
-            SchedulerContext scheduler)
+        public TestUiController(GameContext game)
         {
             _game = game;
-            _scheduler = scheduler;
         }
         
         public void Initialize()
         {
-            _scheduler.CreateTimerAction(() =>
-            {
-                _game.TestCounterEntity.AddTestCounterAddedListener(this);
-            }, 0.1f);
-            
-            //sequencer dont created in zenject initialize method
-            // EcsTimerSequence.Create()
-            //     .Append(() =>
-            //     {
-            //         _game.TestCounterEntity.AddTestCounterAddedListener(this);
-            //         Debug.LogError(_game.TestCounter.Value);
-            //     }, 0.1f);
+            _game.TestCounterEntity.AddTestCounterAddedListener(this);
         }
         
         public override void OnShow()

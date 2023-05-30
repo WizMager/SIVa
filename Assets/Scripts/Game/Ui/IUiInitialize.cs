@@ -1,4 +1,5 @@
-﻿namespace Game.Ui
+﻿
+namespace Game.Ui
 {
     public interface IUiInitialize
     {
