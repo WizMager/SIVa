@@ -12,8 +12,6 @@ namespace Installers.Project
         {
             var canvasView = Container.InstantiatePrefabForComponent<Canvas>(projectCanvas);
             var canvasTransform = canvasView.transform;
-
-            //Container.BindUiView<SettingsController, SettingsView>(settingsPopupView, canvasTransform); for something global like settings
         }
     }
 }

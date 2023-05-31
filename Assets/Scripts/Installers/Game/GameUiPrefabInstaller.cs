@@ -1,6 +1,4 @@
-﻿using Game.Ui.TestUi;
-using SimpleUi;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Installers.Game
@@ -10,14 +8,10 @@ namespace Installers.Game
     {
         [SerializeField] private Canvas canvas;
 
-        [SerializeField] private TestUiView testUiView;
-
         public override void InstallBindings()
         {
             var canvasView = Container.InstantiatePrefabForComponent<Canvas>(canvas);
             var canvasTransform = canvasView.transform;
-            
-            Container.BindUiView<TestUiController, TestUiView>(testUiView, canvasTransform);
         }
     }
 }

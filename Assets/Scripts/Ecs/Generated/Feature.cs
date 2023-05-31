@@ -160,16 +160,6 @@ public class Feature : JCMG.EntitasRedux.Systems
 		}
 	}
 
-	public override void Execute()
-	{
-		for (int i = 0; i < _reactiveSystems.Count; i++)
-		{
-			UnityEngine.Profiling.Profiler.BeginSample(_reactiveSystemNames[i]);
-			_reactiveSystems[i].Execute();
-			UnityEngine.Profiling.Profiler.EndSample();
-		}
-	}
-
 	public override void Cleanup()
 	{
 		for (int i = 0; i < _cleanupSystems.Count; i++)

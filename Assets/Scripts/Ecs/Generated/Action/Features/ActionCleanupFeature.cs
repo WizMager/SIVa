@@ -11,12 +11,10 @@ using JCMG.EntitasRedux;
 
 public class ActionCleanupFeature : Feature
 {
-	#if !ENTITAS_REDUX_NO_SHARED_CONTEXT
 	public ActionCleanupFeature() : base()
 	{
 		AddSystems(Contexts.SharedInstance.Action);
 	}
-	#endif
 
 	public ActionCleanupFeature(IContext<ActionEntity> context) : base()
 	{

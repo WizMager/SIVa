@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 public partial class Contexts : JCMG.EntitasRedux.IContexts
 {
-	#if UNITY_EDITOR && !ENTITAS_REDUX_NO_SHARED_CONTEXT
+	#if UNITY_EDITOR
 
 	static Contexts()
 	{
@@ -31,15 +31,6 @@ public partial class Contexts : JCMG.EntitasRedux.IContexts
 
 	#endif
 
-	#if !ENTITAS_REDUX_NO_SHARED_CONTEXT
-	/// <summary>
-	/// A globally-accessible singleton instance of <see cref="Contexts"/>. Instantiated
-	/// the first time its <see langword="get"/> property is used.
-	/// </summary>
-	/// <remarks>
-	/// If your project forbids global singletons like this one, add a <c>#define</c> named <c>ENTITAS_REDUX_NO_SHARED_CONTEXT</c>
-	/// to its build settings. Doing so will remove this property to prevent accidental use.
-	/// </remarks>
 	public static Contexts SharedInstance
 	{
 		get
@@ -55,7 +46,6 @@ public partial class Contexts : JCMG.EntitasRedux.IContexts
 	}
 
 	static Contexts _sharedInstance;
-	#endif
 
 	public ActionContext Action { get; set; }
 	public GameContext Game { get; set; }

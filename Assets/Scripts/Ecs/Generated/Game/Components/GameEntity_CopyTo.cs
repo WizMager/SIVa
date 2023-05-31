@@ -18,19 +18,7 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Game.Components.TestFloatComponent TestFloat)
-		{
-			CopyTestFloatTo(TestFloat);
-		}
-		else if (component is Ecs.Game.Components.TestCounterComponent TestCounter)
-		{
-			CopyTestCounterTo(TestCounter);
-		}
-		else if (component is Ecs.Game.Components.TestUniqueComponent TestUnique)
-		{
-			IsTestUnique = true;
-		}
-		else if (component is Ecs.Common.Components.LinkComponent Link)
+		if (component is Ecs.Common.Components.LinkComponent Link)
 		{
 			CopyLinkTo(Link);
 		}
@@ -41,18 +29,6 @@ public partial class GameEntity
 		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
 		{
 			IsDestroyed = true;
-		}
-		else if (component is TestFloatAddedListenerComponent TestFloatAddedListener)
-		{
-			CopyTestFloatAddedListenerTo(TestFloatAddedListener);
-		}
-		else if (component is TestCounterAddedListenerComponent TestCounterAddedListener)
-		{
-			CopyTestCounterAddedListenerTo(TestCounterAddedListener);
-		}
-		else if (component is TestCounterRemovedListenerComponent TestCounterRemovedListener)
-		{
-			CopyTestCounterRemovedListenerTo(TestCounterRemovedListener);
 		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{
