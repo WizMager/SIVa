@@ -1,5 +1,5 @@
 ﻿
-namespace Game.Ui
+namespace Game.Ui.Extensions
 {
     public interface IUiInitialize
     {

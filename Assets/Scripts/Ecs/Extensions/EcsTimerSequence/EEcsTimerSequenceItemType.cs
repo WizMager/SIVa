@@ -1,4 +1,4 @@
-namespace Scheduler.Services.EcsTimerSequence
+namespace Ecs.Extensions.EcsTimerSequence
 {
     public enum EEcsTimerSequenceItemType
     {

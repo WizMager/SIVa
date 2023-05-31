@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using Ecs.Scheduler.Extensions;
-using Game.Ui.TestUi;
+using Ecs.Extensions.EcsTimerSequence;
 using JCMG.EntitasRedux;
-using Scheduler.Services.EcsTimerSequence;
-using SimpleUi.Signals;
 using UnityEngine;
 using Zenject;
 

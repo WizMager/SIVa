@@ -1,4 +1,5 @@
-﻿using SimpleUi.Abstracts;
+﻿using Game.Ui.Extensions;
+using SimpleUi.Abstracts;
 
 namespace Game.Ui.TestUi
 {

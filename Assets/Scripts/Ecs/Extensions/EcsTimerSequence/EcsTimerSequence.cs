@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Ecs.Scheduler.Extensions;
 
-namespace Scheduler.Services.EcsTimerSequence
+namespace Ecs.Extensions.EcsTimerSequence
 {
     public class EcsTimerSequence
     {
@@ -21,7 +21,7 @@ namespace Scheduler.Services.EcsTimerSequence
             return instance;
         }
 
-        public EcsTimerSequence Append(Action execute, float delay)
+        public EcsTimerSequence Append(System.Action execute, float delay)
         {
             var item = new EcsTimerSequenceDelayItem(EEcsTimerSequenceItemType.Append, execute, delay);
             _sequenceItems.Add(item);
@@ -29,7 +29,7 @@ namespace Scheduler.Services.EcsTimerSequence
             return this;
         }
 
-        public EcsTimerSequence AppendInterval(Action execute, float delay, float interval, float duration)
+        public EcsTimerSequence AppendInterval(System.Action execute, float delay, float interval, float duration)
         {
             var item = new EcsTimerSequenceIntervalItem(EEcsTimerSequenceItemType.Append, execute, delay, interval,
                 duration);
@@ -38,7 +38,7 @@ namespace Scheduler.Services.EcsTimerSequence
             return this;
         }
 
-        public EcsTimerSequence Join(Action execute, float delay)
+        public EcsTimerSequence Join(System.Action execute, float delay)
         {
             var item = new EcsTimerSequenceDelayItem(EEcsTimerSequenceItemType.Join, execute, delay);
             _sequenceItems.Add(item);

@@ -1,4 +1,4 @@
-﻿using Ecs.Managers;
+﻿using Ecs.Extensions.UidGenerator;
 using Ecs.Views.Impl;
 using Game.Db.PrefabBase;
 using Game.Providers.GameFieldProvider;

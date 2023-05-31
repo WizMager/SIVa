@@ -4,7 +4,7 @@ using Game.Utils;
 using UnityEngine;
 using Zenject;
 
-namespace Installers
+namespace Installers.Level
 {
     public class LevelInstaller : MonoInstaller
     {

@@ -1,4 +1,4 @@
-﻿using Ecs.Managers;
+﻿using Ecs.Extensions.UidGenerator;
 using Zenject;
 
 namespace Ecs.Scheduler.Extensions

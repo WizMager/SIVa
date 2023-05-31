@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Game.Ui;
+using Game.Ui.Extensions;
 using JCMG.EntitasRedux;
 using Zenject;
 

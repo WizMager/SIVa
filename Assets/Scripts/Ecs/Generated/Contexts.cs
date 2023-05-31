@@ -106,11 +106,11 @@ public partial class Contexts
 	[JCMG.EntitasRedux.PostConstructor]
 	public void InitializeEntityIndices()
 	{
-		Game.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<GameEntity, Ecs.Managers.Uid>(
+		Game.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<GameEntity, Ecs.Extensions.UidGenerator.Uid>(
 			Uid,
 			Game.GetGroup(GameMatcher.Uid),
 			(e, c) => ((Ecs.Common.Components.UidComponent)c).Value));
-		Scheduler.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<SchedulerEntity, Ecs.Managers.Uid>(
+		Scheduler.AddEntityIndex(new JCMG.EntitasRedux.PrimaryEntityIndex<SchedulerEntity, Ecs.Extensions.UidGenerator.Uid>(
 			Uid,
 			Scheduler.GetGroup(SchedulerMatcher.Uid),
 			(e, c) => ((Ecs.Common.Components.UidComponent)c).Value));
@@ -119,14 +119,14 @@ public partial class Contexts
 
 public static class ContextsExtensions
 {
-	public static GameEntity GetEntityWithUid(this GameContext context, Ecs.Managers.Uid Value)
+	public static GameEntity GetEntityWithUid(this GameContext context, Ecs.Extensions.UidGenerator.Uid Value)
 	{
-		return ((JCMG.EntitasRedux.PrimaryEntityIndex<GameEntity, Ecs.Managers.Uid>)context.GetEntityIndex(Contexts.Uid)).GetEntity(Value);
+		return ((JCMG.EntitasRedux.PrimaryEntityIndex<GameEntity, Ecs.Extensions.UidGenerator.Uid>)context.GetEntityIndex(Contexts.Uid)).GetEntity(Value);
 	}
 
-	public static SchedulerEntity GetEntityWithUid(this SchedulerContext context, Ecs.Managers.Uid Value)
+	public static SchedulerEntity GetEntityWithUid(this SchedulerContext context, Ecs.Extensions.UidGenerator.Uid Value)
 	{
-		return ((JCMG.EntitasRedux.PrimaryEntityIndex<SchedulerEntity, Ecs.Managers.Uid>)context.GetEntityIndex(Contexts.Uid)).GetEntity(Value);
+		return ((JCMG.EntitasRedux.PrimaryEntityIndex<SchedulerEntity, Ecs.Extensions.UidGenerator.Uid>)context.GetEntityIndex(Contexts.Uid)).GetEntity(Value);
 	}
 }
 //------------------------------------------------------------------------------

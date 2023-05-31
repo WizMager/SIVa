@@ -1,4 +1,4 @@
-﻿using Ecs.Managers;
+﻿using Ecs.Extensions.UidGenerator;
 using JCMG.EntitasRedux;
 
 namespace Ecs.Common.Components

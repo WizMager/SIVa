@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Ecs.Managers
+namespace Ecs.Extensions.UidGenerator
 {
     [Serializable]
     public struct Uid : IEquatable<Uid>

@@ -1,7 +1,7 @@
 ﻿using Core.SceneLoading;
 using Zenject;
 
-namespace Game.Project.Managers
+namespace Installers.Splash
 {
     public class SplashManager : IInitializable
     {

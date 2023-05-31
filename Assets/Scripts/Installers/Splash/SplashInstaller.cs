@@ -1,7 +1,6 @@
-﻿using Game.Project.Managers;
-using Zenject;
+﻿using Zenject;
 
-namespace Installers
+namespace Installers.Splash
 {
     public class SplashInstaller : MonoInstaller
     {
