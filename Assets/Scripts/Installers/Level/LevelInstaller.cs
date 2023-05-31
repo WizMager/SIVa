@@ -1,5 +1,6 @@
 ﻿using Game.Providers.GameFieldProvider;
 using Game.Providers.GameFieldProvider.Impl;
+using Game.Services.InputService.Impl;
 using Game.Utils;
 using UnityEngine;
 using Zenject;
@@ -15,6 +16,8 @@ namespace Installers.Level
             var gameFieldProvider = new GameEnvironmentProvider(gameEnvironment);
 
             Container.Bind<IGameEnvironmentProvider>().FromInstance(gameFieldProvider).AsSingle();
+            
+            Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
         }
     }
 }
