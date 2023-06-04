@@ -12,6 +12,7 @@ namespace Installers.Project
             Container.BindInterfacesTo<LoadingProcessor>().AsSingle();
             Container.Bind<ISceneLoadingManager>().To<SceneLoadingManager>().AsSingle();
             SignalBusInstaller.Install(Container);
+            Container.Bind<Controls>().AsSingle();
 
             Bind();
             BindProjectWindows();

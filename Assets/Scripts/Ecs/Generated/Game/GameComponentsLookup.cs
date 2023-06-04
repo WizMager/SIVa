@@ -16,18 +16,32 @@ public static class GameComponentsLookup
 	public const int Destroyed = 0;
 	public const int Link = 1;
 	public const int Uid = 2;
-	public const int GameDestroyedAddedListener = 3;
-	public const int LinkRemovedListener = 4;
+	public const int Camera = 3;
+	public const int Move = 4;
+	public const int Player = 5;
+	public const int Position = 6;
+	public const int Rotation = 7;
+	public const int GameDestroyedAddedListener = 8;
+	public const int LinkRemovedListener = 9;
+	public const int PositionAddedListener = 10;
+	public const int RotationAddedListener = 11;
 
-	public const int TotalComponents = 5;
+	public const int TotalComponents = 12;
 
 	public static readonly string[] ComponentNames =
 	{
 		"Destroyed",
 		"Link",
 		"Uid",
+		"Camera",
+		"Move",
+		"Player",
+		"Position",
+		"Rotation",
 		"GameDestroyedAddedListener",
-		"LinkRemovedListener"
+		"LinkRemovedListener",
+		"PositionAddedListener",
+		"RotationAddedListener"
 	};
 
 	public static readonly System.Type[] ComponentTypes =
@@ -35,8 +49,15 @@ public static class GameComponentsLookup
 		typeof(Ecs.Common.Components.DestroyedComponent),
 		typeof(Ecs.Common.Components.LinkComponent),
 		typeof(Ecs.Common.Components.UidComponent),
+		typeof(Ecs.Game.Components.CameraComponent),
+		typeof(Ecs.Game.Components.Movement.MoveComponent),
+		typeof(Ecs.Game.Components.PlayerComponent),
+		typeof(Ecs.Game.Components.PositionComponent),
+		typeof(Ecs.Game.Components.RotationComponent),
 		typeof(GameDestroyedAddedListenerComponent),
-		typeof(LinkRemovedListenerComponent)
+		typeof(LinkRemovedListenerComponent),
+		typeof(PositionAddedListenerComponent),
+		typeof(RotationAddedListenerComponent)
 	};
 
 	public static readonly Dictionary<Type, int> ComponentTypeToIndex = new Dictionary<Type, int>
@@ -44,8 +65,15 @@ public static class GameComponentsLookup
 		{ typeof(Ecs.Common.Components.DestroyedComponent), 0 },
 		{ typeof(Ecs.Common.Components.LinkComponent), 1 },
 		{ typeof(Ecs.Common.Components.UidComponent), 2 },
-		{ typeof(GameDestroyedAddedListenerComponent), 3 },
-		{ typeof(LinkRemovedListenerComponent), 4 }
+		{ typeof(Ecs.Game.Components.CameraComponent), 3 },
+		{ typeof(Ecs.Game.Components.Movement.MoveComponent), 4 },
+		{ typeof(Ecs.Game.Components.PlayerComponent), 5 },
+		{ typeof(Ecs.Game.Components.PositionComponent), 6 },
+		{ typeof(Ecs.Game.Components.RotationComponent), 7 },
+		{ typeof(GameDestroyedAddedListenerComponent), 8 },
+		{ typeof(LinkRemovedListenerComponent), 9 },
+		{ typeof(PositionAddedListenerComponent), 10 },
+		{ typeof(RotationAddedListenerComponent), 11 }
 	};
 
 	/// <summary>

@@ -18,7 +18,27 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Common.Components.LinkComponent Link)
+		if (component is Ecs.Game.Components.CameraComponent Camera)
+		{
+			IsCamera = true;
+		}
+		else if (component is Ecs.Game.Components.RotationComponent Rotation)
+		{
+			CopyRotationTo(Rotation);
+		}
+		else if (component is Ecs.Game.Components.PositionComponent Position)
+		{
+			CopyPositionTo(Position);
+		}
+		else if (component is Ecs.Game.Components.PlayerComponent Player)
+		{
+			IsPlayer = true;
+		}
+		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
+		{
+			IsMove = true;
+		}
+		else if (component is Ecs.Common.Components.LinkComponent Link)
 		{
 			CopyLinkTo(Link);
 		}
@@ -29,6 +49,14 @@ public partial class GameEntity
 		else if (component is Ecs.Common.Components.DestroyedComponent Destroyed)
 		{
 			IsDestroyed = true;
+		}
+		else if (component is RotationAddedListenerComponent RotationAddedListener)
+		{
+			CopyRotationAddedListenerTo(RotationAddedListener);
+		}
+		else if (component is PositionAddedListenerComponent PositionAddedListener)
+		{
+			CopyPositionAddedListenerTo(PositionAddedListener);
 		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{
