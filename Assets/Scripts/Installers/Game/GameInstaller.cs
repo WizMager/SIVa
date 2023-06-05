@@ -1,4 +1,6 @@
-﻿using Game.Services.TimeProvider.Impl;
+﻿using Ecs.Game.Systems.Camera;
+using Game.Models.Camera.Impl;
+using Game.Services.TimeProvider.Impl;
 using Zenject;
 
 namespace Installers.Game
@@ -11,6 +13,7 @@ namespace Installers.Game
             BindWindows();
             BindSystems();
             BindServices();
+            OtherBinds();
         }
 
         private void BindInitializeSystems()
@@ -20,7 +23,7 @@ namespace Installers.Game
         
         private void BindSystems()
         {
-            
+            Container.BindInterfacesAndSelfTo<CameraBrainUpdateSystem>().AsSingle();
         }
         
         private void BindServices()
@@ -31,6 +34,11 @@ namespace Installers.Game
         private void BindWindows()
         {
             
+        }
+        
+        private void OtherBinds()
+        {
+            Container.BindInterfacesAndSelfTo<CameraHolder>().AsSingle();
         }
     }
 }

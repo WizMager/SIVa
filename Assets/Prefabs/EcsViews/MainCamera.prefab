@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7475329210295916204}
   - component: {fileID: 6470725514983727401}
+  - component: {fileID: -3135988015936440432}
   - component: {fileID: 413384895757138482}
   - component: {fileID: -8609977035105721755}
   - component: {fileID: -6471902217040226453}
@@ -78,6 +79,40 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &-3135988015936440432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643209754529801065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 3
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 0
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!81 &413384895757138482
 AudioListener:
   m_ObjectHideFlags: 0
@@ -111,4 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityLink: {fileID: -8609977035105721755}
+  mainCamera: {fileID: 6470725514983727401}
+  cinemachineBrain: {fileID: -3135988015936440432}
   cameraOffset: {x: 0, y: 4, z: -4}

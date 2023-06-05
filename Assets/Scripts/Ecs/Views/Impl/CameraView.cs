@@ -1,5 +1,8 @@
-﻿using JCMG.EntitasRedux;
+﻿using Cinemachine;
+using Game.Models.Camera.Impl;
+using JCMG.EntitasRedux;
 using UnityEngine;
+using Zenject;
 
 namespace Ecs.Views.Impl
 {
@@ -7,13 +10,17 @@ namespace Ecs.Views.Impl
         IPositionAddedListener,
         IRotationAddedListener
     {
-        [SerializeField] private Vector3 cameraOffset;
+        [SerializeField] private Camera mainCamera;
+        [SerializeField] private CinemachineBrain cinemachineBrain;
 
-        public Vector3 CameraOffset => cameraOffset;
+        [Inject] private CameraHolder _cameraHolder;
 
         public override void Link(IEntity entity, IContext context)
         {
             var self = (GameEntity) entity;
+            
+            _cameraHolder.Camera = mainCamera;
+            _cameraHolder.SetBrain(cinemachineBrain);
             
             self.AddPositionAddedListener(this);
             self.AddRotationAddedListener(this);

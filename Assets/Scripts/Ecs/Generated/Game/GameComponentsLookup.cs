@@ -21,12 +21,13 @@ public static class GameComponentsLookup
 	public const int Player = 5;
 	public const int Position = 6;
 	public const int Rotation = 7;
-	public const int GameDestroyedAddedListener = 8;
-	public const int LinkRemovedListener = 9;
-	public const int PositionAddedListener = 10;
-	public const int RotationAddedListener = 11;
+	public const int Transform = 8;
+	public const int GameDestroyedAddedListener = 9;
+	public const int LinkRemovedListener = 10;
+	public const int PositionAddedListener = 11;
+	public const int RotationAddedListener = 12;
 
-	public const int TotalComponents = 12;
+	public const int TotalComponents = 13;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -38,6 +39,7 @@ public static class GameComponentsLookup
 		"Player",
 		"Position",
 		"Rotation",
+		"Transform",
 		"GameDestroyedAddedListener",
 		"LinkRemovedListener",
 		"PositionAddedListener",
@@ -54,6 +56,7 @@ public static class GameComponentsLookup
 		typeof(Ecs.Game.Components.PlayerComponent),
 		typeof(Ecs.Game.Components.PositionComponent),
 		typeof(Ecs.Game.Components.RotationComponent),
+		typeof(Ecs.Game.Components.TransformComponent),
 		typeof(GameDestroyedAddedListenerComponent),
 		typeof(LinkRemovedListenerComponent),
 		typeof(PositionAddedListenerComponent),
@@ -70,10 +73,11 @@ public static class GameComponentsLookup
 		{ typeof(Ecs.Game.Components.PlayerComponent), 5 },
 		{ typeof(Ecs.Game.Components.PositionComponent), 6 },
 		{ typeof(Ecs.Game.Components.RotationComponent), 7 },
-		{ typeof(GameDestroyedAddedListenerComponent), 8 },
-		{ typeof(LinkRemovedListenerComponent), 9 },
-		{ typeof(PositionAddedListenerComponent), 10 },
-		{ typeof(RotationAddedListenerComponent), 11 }
+		{ typeof(Ecs.Game.Components.TransformComponent), 8 },
+		{ typeof(GameDestroyedAddedListenerComponent), 9 },
+		{ typeof(LinkRemovedListenerComponent), 10 },
+		{ typeof(PositionAddedListenerComponent), 11 },
+		{ typeof(RotationAddedListenerComponent), 12 }
 	};
 
 	/// <summary>

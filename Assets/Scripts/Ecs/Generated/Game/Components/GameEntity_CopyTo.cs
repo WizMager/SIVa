@@ -18,11 +18,7 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Game.Components.CameraComponent Camera)
-		{
-			IsCamera = true;
-		}
-		else if (component is Ecs.Game.Components.RotationComponent Rotation)
+		if (component is Ecs.Game.Components.RotationComponent Rotation)
 		{
 			CopyRotationTo(Rotation);
 		}
@@ -33,6 +29,14 @@ public partial class GameEntity
 		else if (component is Ecs.Game.Components.PlayerComponent Player)
 		{
 			IsPlayer = true;
+		}
+		else if (component is Ecs.Game.Components.CameraComponent Camera)
+		{
+			IsCamera = true;
+		}
+		else if (component is Ecs.Game.Components.TransformComponent Transform)
+		{
+			CopyTransformTo(Transform);
 		}
 		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
 		{

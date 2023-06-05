@@ -34,7 +34,6 @@ namespace Ecs.Game.Systems.Initialize
             var playerSpawnPoint = gameEnvironment.PlayerSpawnPoint;
 
             CreatePlayer(playerSpawnPoint);
-            CreateCamera(playerSpawnPoint);
         }
 
         private void CreatePlayer(Transform playerSpawnPoint)
@@ -44,17 +43,6 @@ namespace Ecs.Game.Systems.Initialize
             _diContainer.Inject(playerView);
 
             _game.CreatePlayer(playerView, playerSpawnPoint);
-        }
-
-        private void CreateCamera(Transform playerSpawnPoint)
-        {
-            var cameraView = Object.Instantiate(_prefabBase.GetPrefabWithName("MainCamera"))
-                .GetComponent<CameraView>();
-            _diContainer.Inject(cameraView);
-
-            playerSpawnPoint.position += cameraView.CameraOffset;
-
-            _game.CreateCamera(cameraView, playerSpawnPoint);
         }
     }
 }
