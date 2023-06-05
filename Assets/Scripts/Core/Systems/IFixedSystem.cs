@@ -1,6 +1,8 @@
-﻿namespace Core.Systems
+﻿using JCMG.EntitasRedux;
+
+namespace Core.Systems
 {
-    public interface IFixedSystem
+    public interface IFixedSystem : ISystem
     {
         void Fixed();
     }

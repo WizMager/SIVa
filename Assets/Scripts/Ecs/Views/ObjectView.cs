@@ -23,8 +23,13 @@ namespace Ecs.Views
         public virtual void Link(IEntity entity, IContext context)
         {
             _entityDestroyed = false;
+            
             _entity = (GameEntity)entity;
+            
+            _entity.AddTransform(transform);
+            
             entityLink.Link(_entity);
+            
             _entity.OnDestroyEntity += OnDestroyEntity;
             _entity.AddLinkRemovedListener(this);
         }

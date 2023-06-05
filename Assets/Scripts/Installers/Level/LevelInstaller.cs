@@ -29,6 +29,7 @@ namespace Installers.Level
         private void BindInitializeSystems()
         {
             Container.BindInterfacesAndSelfTo<PlayerInitializeSystem>().AsSingle();
+            Container.BindInterfacesAndSelfTo<CameraInitializeSystem>().AsSingle();
         }
         
         private void BindSystems()
