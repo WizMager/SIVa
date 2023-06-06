@@ -36,6 +36,7 @@ namespace Installers.Level
         {
             Container.BindInterfacesAndSelfTo<MovementInputSystem>().AsSingle();
             Container.BindInterfacesAndSelfTo<PlayerMovementSystem>().AsSingle();
+            Container.BindInterfacesAndSelfTo<RotatePlayerBodySystem>().AsSingle();
         }
     }
 }

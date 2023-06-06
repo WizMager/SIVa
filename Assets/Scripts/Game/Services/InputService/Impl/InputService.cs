@@ -12,17 +12,22 @@ namespace Game.Services.InputService.Impl
     {
         private readonly Controls _controls;
         private readonly ActionContext _action;
-        
+        private readonly GameContext _game;
+
+        private Vector2 _previousMousePosition;
+
         public Vector3 MovementInput { get; private set; }
-        public Vector3 LookInput { get; private set; }
+        public Vector2 ScreenMousePosition { get; private set; }
 
         public InputService(
             Controls controls,
-            ActionContext action
+            ActionContext action,
+            GameContext game
             )
         {
             _controls = controls;
             _action = action;
+            _game = game;
             
             Enable();
         }
@@ -55,10 +60,21 @@ namespace Game.Services.InputService.Impl
         
         public void Update()
         {
-            var movementInput = _controls.KeyboardAndMouse.Movement.ReadValue<Vector2>();
-            var lookInput = _controls.KeyboardAndMouse.Look.ReadValue<Vector2>();
-
+            var keyboardAndMouse = _controls.KeyboardAndMouse;
+            
+            var movementInput = keyboardAndMouse.Movement.ReadValue<Vector2>();
             MovementInput = new Vector3(movementInput.x, 0, movementInput.y);
+
+            var mousePosition = keyboardAndMouse.MousePosition.ReadValue<Vector2>();
+            
+            if (_previousMousePosition != mousePosition)
+            {
+                ScreenMousePosition = mousePosition;
+
+                _game.CreateEntity().IsMouseMove = true;
+                _previousMousePosition = mousePosition;
+            }
+            
         }
 
         public void Dispose()

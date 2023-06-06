@@ -37,7 +37,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Look"",
+                    ""name"": ""MousePosition"",
                     ""type"": ""Value"",
                     ""id"": ""58fa6881-0780-4c28-b79e-e1edda438ca4"",
                     ""expectedControlType"": ""Vector2"",
@@ -109,7 +109,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Look"",
+                    ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -121,7 +121,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         // KeyboardAndMouse
         m_KeyboardAndMouse = asset.FindActionMap("KeyboardAndMouse", throwIfNotFound: true);
         m_KeyboardAndMouse_Movement = m_KeyboardAndMouse.FindAction("Movement", throwIfNotFound: true);
-        m_KeyboardAndMouse_Look = m_KeyboardAndMouse.FindAction("Look", throwIfNotFound: true);
+        m_KeyboardAndMouse_MousePosition = m_KeyboardAndMouse.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -184,13 +184,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_KeyboardAndMouse;
     private List<IKeyboardAndMouseActions> m_KeyboardAndMouseActionsCallbackInterfaces = new List<IKeyboardAndMouseActions>();
     private readonly InputAction m_KeyboardAndMouse_Movement;
-    private readonly InputAction m_KeyboardAndMouse_Look;
+    private readonly InputAction m_KeyboardAndMouse_MousePosition;
     public struct KeyboardAndMouseActions
     {
         private @Controls m_Wrapper;
         public KeyboardAndMouseActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_KeyboardAndMouse_Movement;
-        public InputAction @Look => m_Wrapper.m_KeyboardAndMouse_Look;
+        public InputAction @MousePosition => m_Wrapper.m_KeyboardAndMouse_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_KeyboardAndMouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -203,9 +203,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IKeyboardAndMouseActions instance)
@@ -213,9 +213,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IKeyboardAndMouseActions instance)
@@ -236,6 +236,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public interface IKeyboardAndMouseActions
     {
         void OnMovement(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }

@@ -26,6 +26,10 @@ public partial class GameEntity
 		{
 			CopyPositionTo(Position);
 		}
+		else if (component is Ecs.Game.Components.TransformComponent Transform)
+		{
+			CopyTransformTo(Transform);
+		}
 		else if (component is Ecs.Game.Components.PlayerComponent Player)
 		{
 			IsPlayer = true;
@@ -34,9 +38,9 @@ public partial class GameEntity
 		{
 			IsCamera = true;
 		}
-		else if (component is Ecs.Game.Components.TransformComponent Transform)
+		else if (component is Ecs.Game.Components.Movement.MouseMoveComponent MouseMove)
 		{
-			CopyTransformTo(Transform);
+			IsMouseMove = true;
 		}
 		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
 		{

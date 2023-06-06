@@ -14,6 +14,7 @@ namespace Game.Models.Camera
         void DeactivateAllCameras();
         CinemachineVirtualCamera GetCamera(ECameraType cameraType);
         public void SetBrain(CinemachineBrain brain);
+        public Vector3 GetScreenToWorldMousePosition(Vector3 screenMousePosition);
         
         void Init(IReadOnlyDictionary<ECameraType, CinemachineVirtualCamera> cameras);
         void Update();
