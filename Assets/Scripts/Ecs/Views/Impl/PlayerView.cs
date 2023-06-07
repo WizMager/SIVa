@@ -8,6 +8,7 @@ namespace Ecs.Views.Impl
         IRotationAddedListener
     {
         [SerializeField] private CharacterController characterController;
+        [SerializeField] private GameObject playerBody;
         
         public override void Link(IEntity entity, IContext context)
         {
@@ -25,7 +26,7 @@ namespace Ecs.Views.Impl
 
         public void OnRotationAdded(GameEntity entity, Quaternion value)
         {
-            transform.rotation = value;
+            playerBody.transform.rotation = value;
         }
     }
 }

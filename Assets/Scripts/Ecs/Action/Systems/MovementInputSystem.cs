@@ -28,9 +28,7 @@ namespace Ecs.Action.Systems
 
                 var isMove = actionEntity.MovementInput.IsMove;
 
-                var playerEntity = _game.PlayerEntity;
-                
-                playerEntity.IsMove = isMove;
+                _game.PlayerEntity.IsMove = isMove;
             }
         }
     }

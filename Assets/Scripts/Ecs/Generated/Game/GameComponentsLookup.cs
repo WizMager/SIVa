@@ -17,17 +17,19 @@ public static class GameComponentsLookup
 	public const int Link = 1;
 	public const int Uid = 2;
 	public const int Camera = 3;
-	public const int Move = 4;
-	public const int Player = 5;
-	public const int Position = 6;
-	public const int Rotation = 7;
-	public const int Transform = 8;
-	public const int GameDestroyedAddedListener = 9;
-	public const int LinkRemovedListener = 10;
-	public const int PositionAddedListener = 11;
-	public const int RotationAddedListener = 12;
 
-	public const int TotalComponents = 13;
+	public const int MouseMove = 4;
+	public const int Move = 5;
+	public const int Player = 6;
+	public const int Position = 7;
+	public const int Rotation = 8;
+	public const int Transform = 9;
+	public const int GameDestroyedAddedListener = 10;
+	public const int LinkRemovedListener = 11;
+	public const int PositionAddedListener = 12;
+	public const int RotationAddedListener = 13;
+
+	public const int TotalComponents = 14;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -35,6 +37,7 @@ public static class GameComponentsLookup
 		"Link",
 		"Uid",
 		"Camera",
+		"MouseMove",
 		"Move",
 		"Player",
 		"Position",
@@ -52,6 +55,7 @@ public static class GameComponentsLookup
 		typeof(Ecs.Common.Components.LinkComponent),
 		typeof(Ecs.Common.Components.UidComponent),
 		typeof(Ecs.Game.Components.CameraComponent),
+		typeof(Ecs.Game.Components.Movement.MouseMoveComponent),
 		typeof(Ecs.Game.Components.Movement.MoveComponent),
 		typeof(Ecs.Game.Components.PlayerComponent),
 		typeof(Ecs.Game.Components.PositionComponent),

@@ -77,7 +77,20 @@ namespace Game.Models.Camera.Impl
         {
             _brain = brain;
         }
-        
+
+        public Vector3 GetScreenToWorldMousePosition(Vector3 screenMousePosition)
+        {
+            var ray = Camera.ScreenPointToRay(screenMousePosition);
+            var raycastHit = new RaycastHit[1];
+
+            if (Physics.RaycastNonAlloc(ray, raycastHit, float.MaxValue, 1 << 3) > 0)
+            {
+                return raycastHit[0].point;
+            }
+            
+            return Vector3.zero;
+        }
+
         public void Init(IReadOnlyDictionary<ECameraType, CinemachineVirtualCamera> cameras)
         {
             _cameras = cameras;

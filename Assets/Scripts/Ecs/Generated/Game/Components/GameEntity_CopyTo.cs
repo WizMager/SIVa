@@ -38,6 +38,10 @@ public partial class GameEntity
 		{
 			IsCamera = true;
 		}
+		else if (component is Ecs.Game.Components.Movement.MouseMoveComponent MouseMove)
+		{
+			IsMouseMove = true;
+		}
 		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
 		{
 			IsMove = true;
