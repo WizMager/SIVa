@@ -38,6 +38,10 @@ public partial class GameEntity
 		{
 			IsCamera = true;
 		}
+		else if (component is Ecs.Game.Components.Movement.MoveInputComponent MoveInput)
+		{
+			CopyMoveInputTo(MoveInput);
+		}
 		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
 		{
 			IsMove = true;
@@ -65,6 +69,10 @@ public partial class GameEntity
 		else if (component is PositionAddedListenerComponent PositionAddedListener)
 		{
 			CopyPositionAddedListenerTo(PositionAddedListener);
+		}
+		else if (component is MoveInputAddedListenerComponent MoveInputAddedListener)
+		{
+			CopyMoveInputAddedListenerTo(MoveInputAddedListener);
 		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{
