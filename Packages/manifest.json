@@ -1,5 +1,20 @@
 {
+  "scopedRegistries": 
+    [
+      {
+        "name": "NPM",
+        "url": "https://registry.npmjs.org",
+        "scopes": ["com.fluid"]
+      },
+      {
+         "name": "package.openupm.com",
+         "url": "https://package.openupm.com",
+         "scopes": ["com.alelievr.node-graph-processor"]
+      }
+    ],
   "dependencies": {
+    "com.alelievr.node-graph-processor": "1.3.0",
+    "com.fluid.behavior-tree": "2.2.0",
     "com.elestrago.simpleui": "https://gitlab.com/elestrago63/simpleui.git#upm",
     "com.jeffcampbellmakesgames.entitasredux": "https://github.com/jeffcampbellmakesgames/entitas-redux.git#releases/stable",
     "com.jeffcampbellmakesgames.genesis": "https://github.com/jeffcampbellmakesgames/genesis.git#release/stable",
