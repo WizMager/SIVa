@@ -1,6 +1,7 @@
 ﻿using Core.LoadingProcessor.Impls;
 using Core.SceneLoading;
 using Core.SceneLoading.Impls;
+using Game.Services.RandomProvider.Impl;
 using Zenject;
 
 namespace Installers.Project
@@ -13,6 +14,7 @@ namespace Installers.Project
             Container.Bind<ISceneLoadingManager>().To<SceneLoadingManager>().AsSingle();
             SignalBusInstaller.Install(Container);
             Container.Bind<Controls>().AsSingle();
+            Container.BindInterfacesTo<RandomProvider>().AsSingle();
 
             Bind();
             BindProjectWindows();
