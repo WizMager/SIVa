@@ -38,10 +38,6 @@ public partial class GameEntity
 		{
 			IsCamera = true;
 		}
-		else if (component is Ecs.Game.Components.Movement.MoveInputComponent MoveInput)
-		{
-			CopyMoveInputTo(MoveInput);
-		}
 		else if (component is Ecs.Game.Components.Movement.MoveComponent Move)
 		{
 			IsMove = true;
@@ -49,6 +45,10 @@ public partial class GameEntity
 		else if (component is Ecs.Game.Components.Movement.MouseMoveComponent MouseMove)
 		{
 			IsMouseMove = true;
+		}
+		else if (component is Ecs.Game.Components.Movement.MoveInputComponent MoveInput)
+		{
+			CopyMoveInputTo(MoveInput);
 		}
 		else if (component is Ecs.Common.Components.LinkComponent Link)
 		{
