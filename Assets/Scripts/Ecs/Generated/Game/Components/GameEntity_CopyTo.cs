@@ -50,6 +50,10 @@ public partial class GameEntity
 		{
 			CopyMoveInputTo(MoveInput);
 		}
+		else if (component is Ecs.Game.Components.Movement.MouseMoveComponent MouseMove)
+		{
+			IsMouseMove = true;
+		}
 		else if (component is Ecs.Common.Components.LinkComponent Link)
 		{
 			CopyLinkTo(Link);

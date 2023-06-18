@@ -1,11 +1,25 @@
 {
   "dependencies": {
+    "com.alelievr.node-graph-processor": {
+      "version": "1.3.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.elestrago.simpleui": {
       "version": "https://gitlab.com/elestrago63/simpleui.git#upm",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "d3da3af148b172c7a4702c54f8853013fb52fc26"
+    },
+    "com.fluid.behavior-tree": {
+      "version": "2.2.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.org"
     },
     "com.jeffcampbellmakesgames.entitasredux": {
       "version": "https://github.com/jeffcampbellmakesgames/entitas-redux.git#releases/stable",
