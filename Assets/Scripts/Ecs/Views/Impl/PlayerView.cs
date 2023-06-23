@@ -23,6 +23,7 @@ namespace Ecs.Views.Impl
             base.Link(entity, context);
         }
 
+
         public void OnPositionAdded(GameEntity entity, Vector3 value)
         {
             characterController.Move(value);
@@ -32,11 +33,22 @@ namespace Ecs.Views.Impl
         {
             playerBody.transform.rotation = value;
         }
-
         public void OnMoveInputAdded(GameEntity entity, Vector3 value)
         {
-            playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.x);
-            playerAnimator.SetFloat(AnimationKeys.VerticalMove, value.z);
+            var rotation = playerBody.transform.rotation.y;
+
+            if (rotation > -0.5 && rotation < 0.5)
+            {
+                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.x);
+                playerAnimator.SetFloat(AnimationKeys.VerticalMove, value.z);
+                Debug.Log(value.x);
+            }
+            else if (rotation > 0.5 || rotation < -0.5)
+            {
+                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.x);
+                playerAnimator.SetFloat(AnimationKeys.VerticalMove, -value.z);
+            }
         }
+       
     }
 }
