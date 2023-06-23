@@ -30,6 +30,14 @@ namespace Ecs.Game.Systems.Movement
             var player = _game.PlayerEntity;
 
             if (!player.IsMove) return;
+
+            var movementInput = _inputService.MovementInput;
+            var currentInput = player.MoveInput.Value;
+
+            if (currentInput != movementInput)
+            {
+                player.ReplaceMoveInput(movementInput);
+            }
             
             var changePosition = _inputService.MovementInput * _timeProvider.DeltaTime * _playerParameters.MoveSpeed;
             

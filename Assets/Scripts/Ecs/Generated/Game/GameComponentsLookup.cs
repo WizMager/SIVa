@@ -19,16 +19,18 @@ public static class GameComponentsLookup
 	public const int Camera = 3;
 	public const int MouseMove = 4;
 	public const int Move = 5;
-	public const int Player = 6;
-	public const int Position = 7;
-	public const int Rotation = 8;
-	public const int Transform = 9;
-	public const int GameDestroyedAddedListener = 10;
-	public const int LinkRemovedListener = 11;
-	public const int PositionAddedListener = 12;
-	public const int RotationAddedListener = 13;
+	public const int MoveInput = 6;
+	public const int Player = 7;
+	public const int Position = 8;
+	public const int Rotation = 9;
+	public const int Transform = 10;
+	public const int GameDestroyedAddedListener = 11;
+	public const int LinkRemovedListener = 12;
+	public const int MoveInputAddedListener = 13;
+	public const int PositionAddedListener = 14;
+	public const int RotationAddedListener = 15;
 
-	public const int TotalComponents = 14;
+	public const int TotalComponents = 16;
 
 	public static readonly string[] ComponentNames =
 	{
@@ -38,12 +40,14 @@ public static class GameComponentsLookup
 		"Camera",
 		"MouseMove",
 		"Move",
+		"MoveInput",
 		"Player",
 		"Position",
 		"Rotation",
 		"Transform",
 		"GameDestroyedAddedListener",
 		"LinkRemovedListener",
+		"MoveInputAddedListener",
 		"PositionAddedListener",
 		"RotationAddedListener"
 	};
@@ -56,12 +60,14 @@ public static class GameComponentsLookup
 		typeof(Ecs.Game.Components.CameraComponent),
 		typeof(Ecs.Game.Components.Movement.MouseMoveComponent),
 		typeof(Ecs.Game.Components.Movement.MoveComponent),
+		typeof(Ecs.Game.Components.Movement.MoveInputComponent),
 		typeof(Ecs.Game.Components.PlayerComponent),
 		typeof(Ecs.Game.Components.PositionComponent),
 		typeof(Ecs.Game.Components.RotationComponent),
 		typeof(Ecs.Game.Components.TransformComponent),
 		typeof(GameDestroyedAddedListenerComponent),
 		typeof(LinkRemovedListenerComponent),
+		typeof(MoveInputAddedListenerComponent),
 		typeof(PositionAddedListenerComponent),
 		typeof(RotationAddedListenerComponent)
 	};
@@ -74,14 +80,16 @@ public static class GameComponentsLookup
 		{ typeof(Ecs.Game.Components.CameraComponent), 3 },
 		{ typeof(Ecs.Game.Components.Movement.MouseMoveComponent), 4 },
 		{ typeof(Ecs.Game.Components.Movement.MoveComponent), 5 },
-		{ typeof(Ecs.Game.Components.PlayerComponent), 6 },
-		{ typeof(Ecs.Game.Components.PositionComponent), 7 },
-		{ typeof(Ecs.Game.Components.RotationComponent), 8 },
-		{ typeof(Ecs.Game.Components.TransformComponent), 9 },
-		{ typeof(GameDestroyedAddedListenerComponent), 10 },
-		{ typeof(LinkRemovedListenerComponent), 11 },
-		{ typeof(PositionAddedListenerComponent), 12 },
-		{ typeof(RotationAddedListenerComponent), 13 }
+		{ typeof(Ecs.Game.Components.Movement.MoveInputComponent), 6 },
+		{ typeof(Ecs.Game.Components.PlayerComponent), 7 },
+		{ typeof(Ecs.Game.Components.PositionComponent), 8 },
+		{ typeof(Ecs.Game.Components.RotationComponent), 9 },
+		{ typeof(Ecs.Game.Components.TransformComponent), 10 },
+		{ typeof(GameDestroyedAddedListenerComponent), 11 },
+		{ typeof(LinkRemovedListenerComponent), 12 },
+		{ typeof(MoveInputAddedListenerComponent), 13 },
+		{ typeof(PositionAddedListenerComponent), 14 },
+		{ typeof(RotationAddedListenerComponent), 15 }
 	};
 
 	/// <summary>

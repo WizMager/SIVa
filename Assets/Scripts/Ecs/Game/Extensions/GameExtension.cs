@@ -12,6 +12,7 @@ namespace Ecs.Game.Extensions
             playerEntity.AddUid(UidGenerator.Next());
             playerEntity.AddPosition(spawnPoint.position);
             playerEntity.AddRotation(spawnPoint.rotation);
+            playerEntity.AddMoveInput(Vector3.zero);
             playerEntity.IsPlayer = true;
             
             playerView.Link(playerEntity, context);
