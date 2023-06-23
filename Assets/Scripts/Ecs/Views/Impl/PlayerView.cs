@@ -37,16 +37,26 @@ namespace Ecs.Views.Impl
         {
             var rotation = playerBody.transform.rotation.y;
 
-            if (rotation > -0.5 && rotation < 0.5)
+            if (rotation >= -0.25 && rotation <= 0.25)
             {
                 playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.x);
                 playerAnimator.SetFloat(AnimationKeys.VerticalMove, value.z);
-                Debug.Log(value.x);
             }
-            else if (rotation > 0.5 || rotation < -0.5)
+            else if (rotation >= 0.75 || rotation <= -0.75)
             {
-                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.x);
+                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, -value.x);
                 playerAnimator.SetFloat(AnimationKeys.VerticalMove, -value.z);
+            }
+
+            if (rotation > 0.25 && rotation < 0.75)
+            {
+                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, -value.z);
+                playerAnimator.SetFloat(AnimationKeys.VerticalMove, value.x);
+            }
+            else if (rotation > -0.75 && rotation < -0.25)
+            {
+                playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.z);
+                playerAnimator.SetFloat(AnimationKeys.VerticalMove, -value.x);
             }
         }
        
