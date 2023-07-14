@@ -1,6 +1,5 @@
-﻿using Assets.Scripts.Game.Db.PlayerParameters;
+﻿using System;
 using Assets.Scripts.Game.Utils;
-using System;
 using UnityEngine;
 
 namespace Game.Db.PlayerParameters.Impl
@@ -10,14 +9,14 @@ namespace Game.Db.PlayerParameters.Impl
     {
         [SerializeField] private UnitParameters[] unitParameters;
 
-        public UnitParameters GetParametersByType(UnitClass unitClass)
+        public UnitParameters GetParametersByType(EUnitClass eUnitClass)
         {
             foreach (var item in unitParameters)
             {
-                if (item.unitClass != unitClass) continue;
+                if (item.eUnitClass != eUnitClass) continue;
                 return item;                
             }
-            throw new Exception($"{nameof(PlayerParameters)}; there is no parameters with UnitClass {unitClass} ");
+            throw new Exception($"{nameof(PlayerParameters)}; there is no parameters with UnitClass {eUnitClass} ");
         }        
     }
 }

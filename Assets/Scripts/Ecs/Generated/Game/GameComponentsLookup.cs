@@ -14,45 +14,43 @@ using JCMG.EntitasRedux;
 public static class GameComponentsLookup
 {
 	public const int ArmorAddedListener = 0;
-	public const int UnitParameters = 1;
-	public const int CreteRateAddedListener = 2;
-	public const int DexterityAddedListener = 3;
-	public const int Destroyed = 4;
-	public const int Link = 5;
-	public const int Uid = 6;
-	public const int Camera = 7;
-	public const int Armor = 8;
-	public const int CreteRate = 9;
-	public const int Dexterity = 10;
-	public const int EnergyRecovery = 11;
-	public const int HealthRecovery = 12;
-	public const int MoveSpeed = 13;
-	public const int Power = 14;
-	public const int Wisdom = 15;
-	public const int MouseMove = 16;
-	public const int Move = 17;
-	public const int MoveInput = 18;
-	public const int Player = 19;
-	public const int Position = 20;
-	public const int Rotation = 21;
-	public const int Transform = 22;
-	public const int EnergyRecoveryAddedListener = 23;
-	public const int GameDestroyedAddedListener = 24;
-	public const int HealthRecoveryAddedListener = 25;
-	public const int LinkRemovedListener = 26;
-	public const int MoveInputAddedListener = 27;
-	public const int MoveSpeedAddedListener = 28;
-	public const int PositionAddedListener = 29;
-	public const int PowerAddedListener = 30;
-	public const int RotationAddedListener = 31;
-	public const int WisdomAddedListener = 32;
+	public const int CreteRateAddedListener = 1;
+	public const int DexterityAddedListener = 2;
+	public const int Destroyed = 3;
+	public const int Link = 4;
+	public const int Uid = 5;
+	public const int Camera = 6;
+	public const int Armor = 7;
+	public const int CreteRate = 8;
+	public const int Dexterity = 9;
+	public const int EnergyRecovery = 10;
+	public const int HealthRecovery = 11;
+	public const int MoveSpeed = 12;
+	public const int Power = 13;
+	public const int Wisdom = 14;
+	public const int MouseMove = 15;
+	public const int Move = 16;
+	public const int MoveInput = 17;
+	public const int Player = 18;
+	public const int Position = 19;
+	public const int Rotation = 20;
+	public const int Transform = 21;
+	public const int EnergyRecoveryAddedListener = 22;
+	public const int GameDestroyedAddedListener = 23;
+	public const int HealthRecoveryAddedListener = 24;
+	public const int LinkRemovedListener = 25;
+	public const int MoveInputAddedListener = 26;
+	public const int MoveSpeedAddedListener = 27;
+	public const int PositionAddedListener = 28;
+	public const int PowerAddedListener = 29;
+	public const int RotationAddedListener = 30;
+	public const int WisdomAddedListener = 31;
 
-	public const int TotalComponents = 33;
+	public const int TotalComponents = 32;
 
 	public static readonly string[] ComponentNames =
 	{
 		"ArmorAddedListener",
-		"UnitParameters",
 		"CreteRateAddedListener",
 		"DexterityAddedListener",
 		"Destroyed",
@@ -89,7 +87,6 @@ public static class GameComponentsLookup
 	public static readonly System.Type[] ComponentTypes =
 	{
 		typeof(ArmorAddedListenerComponent),
-		typeof(Assets.Scripts.Ecs.Game.Components.UnitParametersComponent),
 		typeof(CreteRateAddedListenerComponent),
 		typeof(DexterityAddedListenerComponent),
 		typeof(Ecs.Common.Components.DestroyedComponent),
@@ -126,38 +123,37 @@ public static class GameComponentsLookup
 	public static readonly Dictionary<Type, int> ComponentTypeToIndex = new Dictionary<Type, int>
 	{
 		{ typeof(ArmorAddedListenerComponent), 0 },
-		{ typeof(Assets.Scripts.Ecs.Game.Components.UnitParametersComponent), 1 },
-		{ typeof(CreteRateAddedListenerComponent), 2 },
-		{ typeof(DexterityAddedListenerComponent), 3 },
-		{ typeof(Ecs.Common.Components.DestroyedComponent), 4 },
-		{ typeof(Ecs.Common.Components.LinkComponent), 5 },
-		{ typeof(Ecs.Common.Components.UidComponent), 6 },
-		{ typeof(Ecs.Game.Components.CameraComponent), 7 },
-		{ typeof(Ecs.Game.Components.Characteristics.ArmorComponent), 8 },
-		{ typeof(Ecs.Game.Components.Characteristics.CreteRateComponent), 9 },
-		{ typeof(Ecs.Game.Components.Characteristics.DexterityComponent), 10 },
-		{ typeof(Ecs.Game.Components.Characteristics.EnergyRecoveryComponent), 11 },
-		{ typeof(Ecs.Game.Components.Characteristics.HealthRecoveryComponent), 12 },
-		{ typeof(Ecs.Game.Components.Characteristics.MoveSpeedComponent), 13 },
-		{ typeof(Ecs.Game.Components.Characteristics.PowerComponent), 14 },
-		{ typeof(Ecs.Game.Components.Characteristics.WisdomComponent), 15 },
-		{ typeof(Ecs.Game.Components.Movement.MouseMoveComponent), 16 },
-		{ typeof(Ecs.Game.Components.Movement.MoveComponent), 17 },
-		{ typeof(Ecs.Game.Components.Movement.MoveInputComponent), 18 },
-		{ typeof(Ecs.Game.Components.PlayerComponent), 19 },
-		{ typeof(Ecs.Game.Components.PositionComponent), 20 },
-		{ typeof(Ecs.Game.Components.RotationComponent), 21 },
-		{ typeof(Ecs.Game.Components.TransformComponent), 22 },
-		{ typeof(EnergyRecoveryAddedListenerComponent), 23 },
-		{ typeof(GameDestroyedAddedListenerComponent), 24 },
-		{ typeof(HealthRecoveryAddedListenerComponent), 25 },
-		{ typeof(LinkRemovedListenerComponent), 26 },
-		{ typeof(MoveInputAddedListenerComponent), 27 },
-		{ typeof(MoveSpeedAddedListenerComponent), 28 },
-		{ typeof(PositionAddedListenerComponent), 29 },
-		{ typeof(PowerAddedListenerComponent), 30 },
-		{ typeof(RotationAddedListenerComponent), 31 },
-		{ typeof(WisdomAddedListenerComponent), 32 }
+		{ typeof(CreteRateAddedListenerComponent), 1 },
+		{ typeof(DexterityAddedListenerComponent), 2 },
+		{ typeof(Ecs.Common.Components.DestroyedComponent), 3 },
+		{ typeof(Ecs.Common.Components.LinkComponent), 4 },
+		{ typeof(Ecs.Common.Components.UidComponent), 5 },
+		{ typeof(Ecs.Game.Components.CameraComponent), 6 },
+		{ typeof(Ecs.Game.Components.Characteristics.ArmorComponent), 7 },
+		{ typeof(Ecs.Game.Components.Characteristics.CreteRateComponent), 8 },
+		{ typeof(Ecs.Game.Components.Characteristics.DexterityComponent), 9 },
+		{ typeof(Ecs.Game.Components.Characteristics.EnergyRecoveryComponent), 10 },
+		{ typeof(Ecs.Game.Components.Characteristics.HealthRecoveryComponent), 11 },
+		{ typeof(Ecs.Game.Components.Characteristics.MoveSpeedComponent), 12 },
+		{ typeof(Ecs.Game.Components.Characteristics.PowerComponent), 13 },
+		{ typeof(Ecs.Game.Components.Characteristics.WisdomComponent), 14 },
+		{ typeof(Ecs.Game.Components.Movement.MouseMoveComponent), 15 },
+		{ typeof(Ecs.Game.Components.Movement.MoveComponent), 16 },
+		{ typeof(Ecs.Game.Components.Movement.MoveInputComponent), 17 },
+		{ typeof(Ecs.Game.Components.PlayerComponent), 18 },
+		{ typeof(Ecs.Game.Components.PositionComponent), 19 },
+		{ typeof(Ecs.Game.Components.RotationComponent), 20 },
+		{ typeof(Ecs.Game.Components.TransformComponent), 21 },
+		{ typeof(EnergyRecoveryAddedListenerComponent), 22 },
+		{ typeof(GameDestroyedAddedListenerComponent), 23 },
+		{ typeof(HealthRecoveryAddedListenerComponent), 24 },
+		{ typeof(LinkRemovedListenerComponent), 25 },
+		{ typeof(MoveInputAddedListenerComponent), 26 },
+		{ typeof(MoveSpeedAddedListenerComponent), 27 },
+		{ typeof(PositionAddedListenerComponent), 28 },
+		{ typeof(PowerAddedListenerComponent), 29 },
+		{ typeof(RotationAddedListenerComponent), 30 },
+		{ typeof(WisdomAddedListenerComponent), 31 }
 	};
 
 	/// <summary>

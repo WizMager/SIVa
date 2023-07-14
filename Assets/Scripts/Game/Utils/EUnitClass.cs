@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Game.Utils
 {
-    public enum UnitClass
+    public enum EUnitClass
     {
         warrior = 0,
         wizard = 1, 

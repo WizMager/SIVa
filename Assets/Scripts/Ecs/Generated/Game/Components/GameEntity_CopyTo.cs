@@ -18,11 +18,7 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Assets.Scripts.Ecs.Game.Components.UnitParametersComponent UnitParameters)
-		{
-			CopyUnitParametersTo(UnitParameters);
-		}
-		else if (component is Ecs.Game.Components.RotationComponent Rotation)
+		if (component is Ecs.Game.Components.RotationComponent Rotation)
 		{
 			CopyRotationTo(Rotation);
 		}
@@ -54,10 +50,6 @@ public partial class GameEntity
 		{
 			CopyMoveInputTo(MoveInput);
 		}
-		else if (component is Ecs.Game.Components.Characteristics.MoveSpeedComponent MoveSpeed)
-		{
-			CopyMoveSpeedTo(MoveSpeed);
-		}
 		else if (component is Ecs.Game.Components.Characteristics.ArmorComponent Armor)
 		{
 			CopyArmorTo(Armor);
@@ -81,6 +73,10 @@ public partial class GameEntity
 		else if (component is Ecs.Game.Components.Characteristics.DexterityComponent Dexterity)
 		{
 			CopyDexterityTo(Dexterity);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.MoveSpeedComponent MoveSpeed)
+		{
+			CopyMoveSpeedTo(MoveSpeed);
 		}
 		else if (component is Ecs.Game.Components.Characteristics.PowerComponent Power)
 		{
@@ -110,10 +106,6 @@ public partial class GameEntity
 		{
 			CopyMoveInputAddedListenerTo(MoveInputAddedListener);
 		}
-		else if (component is MoveSpeedAddedListenerComponent MoveSpeedAddedListener)
-		{
-			CopyMoveSpeedAddedListenerTo(MoveSpeedAddedListener);
-		}
 		else if (component is ArmorAddedListenerComponent ArmorAddedListener)
 		{
 			CopyArmorAddedListenerTo(ArmorAddedListener);
@@ -137,6 +129,10 @@ public partial class GameEntity
 		else if (component is DexterityAddedListenerComponent DexterityAddedListener)
 		{
 			CopyDexterityAddedListenerTo(DexterityAddedListener);
+		}
+		else if (component is MoveSpeedAddedListenerComponent MoveSpeedAddedListener)
+		{
+			CopyMoveSpeedAddedListenerTo(MoveSpeedAddedListener);
 		}
 		else if (component is PowerAddedListenerComponent PowerAddedListener)
 		{

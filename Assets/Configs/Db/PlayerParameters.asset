@@ -12,4 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1fb3dd198f446ebf63d2803885b1f7, type: 3}
   m_Name: PlayerParameters
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  unitParameters:
+  - parameters:
+    - parameter: 0
+      value: 5
+    - parameter: 1
+      value: 134
+    - parameter: 2
+      value: 134
+    - parameter: 3
+      value: 134
+    - parameter: 4
+      value: 134
+    - parameter: 5
+      value: 134
+    - parameter: 6
+      value: 5
+    - parameter: 7
+      value: 134
+    eUnitClass: 0

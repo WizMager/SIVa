@@ -1,10 +1,10 @@
-﻿using Assets.Scripts.Game.Services.Parameters.Impl;
-using Ecs.Action.Systems;
+﻿using Ecs.Action.Systems;
 using Ecs.Game.Systems.Initialize;
 using Ecs.Game.Systems.Movement;
 using Game.Providers.GameFieldProvider;
 using Game.Providers.GameFieldProvider.Impl;
 using Game.Services.InputService.Impl;
+using Game.Services.Parameters.Impl;
 using Game.Utils;
 using UnityEngine;
 using Zenject;
@@ -22,7 +22,7 @@ namespace Installers.Level
             Container.Bind<IGameEnvironmentProvider>().FromInstance(gameFieldProvider).AsSingle();
             
             Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
-            Container.BindInterfacesAndSelfTo<ChangeParameters>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ChangeParametersService>().AsSingle();
             
             BindInitializeSystems();
             BindSystems();

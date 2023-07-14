@@ -1,6 +1,4 @@
-﻿using Assets.Scripts.Game.Services.Parameters;
-
-namespace Assets.Scripts.Ecs.Game.Systems.Parameters
+﻿namespace Assets.Scripts.Ecs.Game.Systems.Parameters
 {
     public class PlayerParametersSystem
     {

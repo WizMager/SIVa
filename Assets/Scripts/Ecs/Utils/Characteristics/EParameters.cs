@@ -1,9 +1,9 @@
-﻿namespace Assets.Scripts.Game.Ecs.Utils.Characteristics
+﻿namespace Ecs.Utils.Characteristics
 {
     public enum EParameters
     {
         Armor = 0,
-        CreteRate = 1,
+        CritRate = 1,
         Dexterity = 2,
         EnergyRecovery = 3,
         HealthRecovery = 4,

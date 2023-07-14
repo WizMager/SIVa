@@ -1,5 +1,4 @@
-﻿using Game.Db.PlayerParameters;
-using Game.Services.InputService;
+﻿using Game.Services.InputService;
 using Game.Services.TimeProvider;
 using JCMG.EntitasRedux;
 
@@ -10,19 +9,16 @@ namespace Ecs.Game.Systems.Movement
         private readonly GameContext _game;
         private readonly IInputService _inputService;
         private readonly ITimeProvider _timeProvider;
-        private readonly IPlayerParameters _playerParameters;
 
         public PlayerMovementSystem(
             GameContext game,
             IInputService inputService,
-            ITimeProvider timeProvider,
-            IPlayerParameters playerParameters
+            ITimeProvider timeProvider
             )
         {
             _game = game;
             _inputService = inputService;
             _timeProvider = timeProvider;
-            _playerParameters = playerParameters;
         }
         
         public void Update()
@@ -39,7 +35,7 @@ namespace Ecs.Game.Systems.Movement
                 player.ReplaceMoveInput(movementInput);
             }
             
-            var changePosition = _inputService.MovementInput * _timeProvider.DeltaTime * player.UnitParameters.Value.MoveSpeed;
+            var changePosition = _inputService.MovementInput * _timeProvider.DeltaTime * player.MoveSpeed.Value;
             
             player.ReplacePosition(changePosition);
         }
