@@ -1,5 +1,7 @@
-﻿using Ecs.Game.Extensions;
+﻿using Assets.Scripts.Ecs.Utils;
+using Ecs.Game.Extensions;
 using Ecs.Views.Impl;
+using Game.Db.PlayerParameters;
 using Game.Db.PrefabBase;
 using Game.Providers.GameFieldProvider;
 using JCMG.EntitasRedux;
@@ -14,18 +16,21 @@ namespace Ecs.Game.Systems.Initialize
         private readonly IPrefabBase _prefabBase;
         private readonly IGameEnvironmentProvider _gameEnvironmentProvider;
         private readonly DiContainer _diContainer;
+        private readonly IPlayerParameters _playerParameters;
 
         public PlayerInitializeSystem(
             GameContext game,
             IPrefabBase prefabBase,
             IGameEnvironmentProvider gameEnvironmentProvider,
-            DiContainer diContainer
+            DiContainer diContainer,
+            IPlayerParameters playerParameters
             )
         {
             _game = game;
             _prefabBase = prefabBase;
             _gameEnvironmentProvider = gameEnvironmentProvider;
             _diContainer = diContainer;
+            _playerParameters = playerParameters;
         }
         
         public void Initialize()
@@ -42,7 +47,8 @@ namespace Ecs.Game.Systems.Initialize
                 .GetComponent<PlayerView>();
             _diContainer.Inject(playerView);
 
-            _game.CreatePlayer(playerView, playerSpawnPoint);
+            var player =  _game.CreatePlayer(playerView, playerSpawnPoint);
+            player.AddUnitParameters(new Parameters());
         }
     }
 }

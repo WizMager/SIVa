@@ -1,7 +1,10 @@
-﻿namespace Game.Db.PlayerParameters
+﻿using Assets.Scripts.Game.Db.PlayerParameters;
+using Assets.Scripts.Game.Utils;
+
+namespace Game.Db.PlayerParameters
 {
     public interface IPlayerParameters
     {
-        float MoveSpeed { get; }
+        public UnitParameters GetParametersByType(UnitClass unitClass);
     }
 }

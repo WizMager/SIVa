@@ -11,10 +11,18 @@ public sealed class GameEventSystems : Feature
 {
 	public GameEventSystems(Contexts contexts)
 	{
+		Add(new ArmorAddedEventSystem(contexts)); // priority: 0
+		Add(new CreteRateAddedEventSystem(contexts)); // priority: 0
 		Add(new GameDestroyedAddedEventSystem(contexts)); // priority: 0
+		Add(new DexterityAddedEventSystem(contexts)); // priority: 0
+		Add(new EnergyRecoveryAddedEventSystem(contexts)); // priority: 0
+		Add(new HealthRecoveryAddedEventSystem(contexts)); // priority: 0
 		Add(new LinkRemovedEventSystem(contexts)); // priority: 0
 		Add(new MoveInputAddedEventSystem(contexts)); // priority: 0
+		Add(new MoveSpeedAddedEventSystem(contexts)); // priority: 0
 		Add(new PositionAddedEventSystem(contexts)); // priority: 0
+		Add(new PowerAddedEventSystem(contexts)); // priority: 0
 		Add(new RotationAddedEventSystem(contexts)); // priority: 0
+		Add(new WisdomAddedEventSystem(contexts)); // priority: 0
 	}
 }

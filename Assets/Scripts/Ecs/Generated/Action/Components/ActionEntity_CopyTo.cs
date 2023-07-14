@@ -18,7 +18,11 @@ public partial class ActionEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Action.Components.MovementInputComponent MovementInput)
+		if (component is Assets.Scripts.Ecs.Action.Components.ParametersComponent Parameters)
+		{
+			CopyParametersTo(Parameters);
+		}
+		else if (component is Ecs.Action.Components.MovementInputComponent MovementInput)
 		{
 			CopyMovementInputTo(MovementInput);
 		}

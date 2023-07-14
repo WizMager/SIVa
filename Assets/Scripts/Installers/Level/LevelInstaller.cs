@@ -1,4 +1,5 @@
-﻿using Ecs.Action.Systems;
+﻿using Assets.Scripts.Game.Services.Parameters.Impl;
+using Ecs.Action.Systems;
 using Ecs.Game.Systems.Initialize;
 using Ecs.Game.Systems.Movement;
 using Game.Providers.GameFieldProvider;
@@ -21,6 +22,7 @@ namespace Installers.Level
             Container.Bind<IGameEnvironmentProvider>().FromInstance(gameFieldProvider).AsSingle();
             
             Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ChangeParameters>().AsSingle();
             
             BindInitializeSystems();
             BindSystems();

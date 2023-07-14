@@ -18,7 +18,11 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Game.Components.RotationComponent Rotation)
+		if (component is Assets.Scripts.Ecs.Game.Components.UnitParametersComponent UnitParameters)
+		{
+			CopyUnitParametersTo(UnitParameters);
+		}
+		else if (component is Ecs.Game.Components.RotationComponent Rotation)
 		{
 			CopyRotationTo(Rotation);
 		}
@@ -50,6 +54,38 @@ public partial class GameEntity
 		{
 			CopyMoveInputTo(MoveInput);
 		}
+		else if (component is Ecs.Game.Components.Characteristics.MoveSpeedComponent MoveSpeed)
+		{
+			CopyMoveSpeedTo(MoveSpeed);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.ArmorComponent Armor)
+		{
+			CopyArmorTo(Armor);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.WisdomComponent Wisdom)
+		{
+			CopyWisdomTo(Wisdom);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.EnergyRecoveryComponent EnergyRecovery)
+		{
+			CopyEnergyRecoveryTo(EnergyRecovery);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.HealthRecoveryComponent HealthRecovery)
+		{
+			CopyHealthRecoveryTo(HealthRecovery);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.CreteRateComponent CreteRate)
+		{
+			CopyCreteRateTo(CreteRate);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.DexterityComponent Dexterity)
+		{
+			CopyDexterityTo(Dexterity);
+		}
+		else if (component is Ecs.Game.Components.Characteristics.PowerComponent Power)
+		{
+			CopyPowerTo(Power);
+		}
 		else if (component is Ecs.Common.Components.LinkComponent Link)
 		{
 			CopyLinkTo(Link);
@@ -73,6 +109,38 @@ public partial class GameEntity
 		else if (component is MoveInputAddedListenerComponent MoveInputAddedListener)
 		{
 			CopyMoveInputAddedListenerTo(MoveInputAddedListener);
+		}
+		else if (component is MoveSpeedAddedListenerComponent MoveSpeedAddedListener)
+		{
+			CopyMoveSpeedAddedListenerTo(MoveSpeedAddedListener);
+		}
+		else if (component is ArmorAddedListenerComponent ArmorAddedListener)
+		{
+			CopyArmorAddedListenerTo(ArmorAddedListener);
+		}
+		else if (component is WisdomAddedListenerComponent WisdomAddedListener)
+		{
+			CopyWisdomAddedListenerTo(WisdomAddedListener);
+		}
+		else if (component is EnergyRecoveryAddedListenerComponent EnergyRecoveryAddedListener)
+		{
+			CopyEnergyRecoveryAddedListenerTo(EnergyRecoveryAddedListener);
+		}
+		else if (component is HealthRecoveryAddedListenerComponent HealthRecoveryAddedListener)
+		{
+			CopyHealthRecoveryAddedListenerTo(HealthRecoveryAddedListener);
+		}
+		else if (component is CreteRateAddedListenerComponent CreteRateAddedListener)
+		{
+			CopyCreteRateAddedListenerTo(CreteRateAddedListener);
+		}
+		else if (component is DexterityAddedListenerComponent DexterityAddedListener)
+		{
+			CopyDexterityAddedListenerTo(DexterityAddedListener);
+		}
+		else if (component is PowerAddedListenerComponent PowerAddedListener)
+		{
+			CopyPowerAddedListenerTo(PowerAddedListener);
 		}
 		else if (component is LinkRemovedListenerComponent LinkRemovedListener)
 		{

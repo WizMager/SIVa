@@ -39,7 +39,7 @@ namespace Ecs.Game.Systems.Movement
                 player.ReplaceMoveInput(movementInput);
             }
             
-            var changePosition = _inputService.MovementInput * _timeProvider.DeltaTime * _playerParameters.MoveSpeed;
+            var changePosition = _inputService.MovementInput * _timeProvider.DeltaTime * player.UnitParameters.Value.MoveSpeed;
             
             player.ReplacePosition(changePosition);
         }
