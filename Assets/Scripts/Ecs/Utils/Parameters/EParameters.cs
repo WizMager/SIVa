@@ -1,4 +1,4 @@
-﻿namespace Ecs.Utils.Characteristics
+﻿namespace Ecs.Utils.Parameters
 {
     public enum EParameters
     {
@@ -9,6 +9,9 @@
         HealthRecovery = 4,
         Power = 5,
         MoveSpeed = 6,
-        Wisdom = 7
+        Wisdom = 7,
+        Health = 8,
+        Mana = 9,
+        UltimateEnergy = 10
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Ecs.Utils.Characteristics;
+using Ecs.Utils.Parameters;
 
 namespace Game.Db.PlayerParameters.Vo
 {

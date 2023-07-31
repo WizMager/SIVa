@@ -18,7 +18,23 @@ public partial class GameEntity
 	public void CopyComponentTo(IComponent component)
 	{
 		#if !ENTITAS_REDUX_NO_IMPL
-		if (component is Ecs.Game.Components.RotationComponent Rotation)
+		if (component is Assets.Scripts.Ecs.Game.Components.DeadComponent Dead)
+		{
+			IsDead = true;
+		}
+		else if (component is Assets.Scripts.Ecs.Game.Components.Characteristics.HealthComponent Health)
+		{
+			CopyHealthTo(Health);
+		}
+		else if (component is Assets.Scripts.Ecs.Game.Components.Characteristics.ManaComponent Mana)
+		{
+			CopyManaTo(Mana);
+		}
+		else if (component is Assets.Scripts.Ecs.Game.Components.Characteristics.UltimateEnergyComponent UltimateEnergy)
+		{
+			CopyUltimateEnergyTo(UltimateEnergy);
+		}
+		else if (component is Ecs.Game.Components.RotationComponent Rotation)
 		{
 			CopyRotationTo(Rotation);
 		}
@@ -62,13 +78,13 @@ public partial class GameEntity
 		{
 			CopyEnergyRecoveryTo(EnergyRecovery);
 		}
+		else if (component is Ecs.Game.Components.Characteristics.CritRateComponent CritRate)
+		{
+			CopyCritRateTo(CritRate);
+		}
 		else if (component is Ecs.Game.Components.Characteristics.HealthRecoveryComponent HealthRecovery)
 		{
 			CopyHealthRecoveryTo(HealthRecovery);
-		}
-		else if (component is Ecs.Game.Components.Characteristics.CreteRateComponent CreteRate)
-		{
-			CopyCreteRateTo(CreteRate);
 		}
 		else if (component is Ecs.Game.Components.Characteristics.DexterityComponent Dexterity)
 		{
@@ -94,6 +110,18 @@ public partial class GameEntity
 		{
 			IsDestroyed = true;
 		}
+		else if (component is HealthAddedListenerComponent HealthAddedListener)
+		{
+			CopyHealthAddedListenerTo(HealthAddedListener);
+		}
+		else if (component is ManaAddedListenerComponent ManaAddedListener)
+		{
+			CopyManaAddedListenerTo(ManaAddedListener);
+		}
+		else if (component is UltimateEnergyAddedListenerComponent UltimateEnergyAddedListener)
+		{
+			CopyUltimateEnergyAddedListenerTo(UltimateEnergyAddedListener);
+		}
 		else if (component is RotationAddedListenerComponent RotationAddedListener)
 		{
 			CopyRotationAddedListenerTo(RotationAddedListener);
@@ -118,13 +146,13 @@ public partial class GameEntity
 		{
 			CopyEnergyRecoveryAddedListenerTo(EnergyRecoveryAddedListener);
 		}
+		else if (component is CritRateAddedListenerComponent CritRateAddedListener)
+		{
+			CopyCritRateAddedListenerTo(CritRateAddedListener);
+		}
 		else if (component is HealthRecoveryAddedListenerComponent HealthRecoveryAddedListener)
 		{
 			CopyHealthRecoveryAddedListenerTo(HealthRecoveryAddedListener);
-		}
-		else if (component is CreteRateAddedListenerComponent CreteRateAddedListener)
-		{
-			CopyCreteRateAddedListenerTo(CreteRateAddedListener);
 		}
 		else if (component is DexterityAddedListenerComponent DexterityAddedListener)
 		{

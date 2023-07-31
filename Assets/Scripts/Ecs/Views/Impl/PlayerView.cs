@@ -19,10 +19,9 @@ namespace Ecs.Views.Impl
             self.AddPositionAddedListener(this);
             self.AddRotationAddedListener(this);
             self.AddMoveInputAddedListener(this);
-            
+
             base.Link(entity, context);
         }
-
 
         public void OnPositionAdded(GameEntity entity, Vector3 value)
         {
@@ -33,6 +32,7 @@ namespace Ecs.Views.Impl
         {
             playerBody.transform.rotation = value;
         }
+
         public void OnMoveInputAdded(GameEntity entity, Vector3 value)
         {
             var rotation = playerBody.transform.rotation.y;
@@ -58,7 +58,6 @@ namespace Ecs.Views.Impl
                 playerAnimator.SetFloat(AnimationKeys.HorizontalMove, value.z);
                 playerAnimator.SetFloat(AnimationKeys.VerticalMove, -value.x);
             }
-        }
-       
+        }       
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Ecs.Extensions.UidGenerator;
-using Ecs.Utils.Characteristics;
+using Ecs.Utils.Parameters;
 
 namespace Game.Services.Parameters
 {

@@ -1,6 +1,6 @@
 ﻿using Assets.Scripts.Game.Utils;
 using Ecs.Game.Extensions;
-using Ecs.Utils.Characteristics;
+using Ecs.Utils.Parameters;
 using Ecs.Views.Impl;
 using Game.Db.PlayerParameters;
 using Game.Db.PrefabBase;
@@ -64,19 +64,34 @@ namespace Ecs.Game.Systems.Initialize
                         player.AddArmor(parameter.value);
                         break;
                     case EParameters.CritRate:
+                        player.AddCritRate(parameter.value);
                         break;
                     case EParameters.Dexterity:
+                        player.AddDexterity(parameter.value);
                         break;
                     case EParameters.EnergyRecovery:
+                        player.AddEnergyRecovery(parameter.value);
                         break;
                     case EParameters.HealthRecovery:
+                        player.AddHealthRecovery(parameter.value);
                         break;
                     case EParameters.Power:
+                        player.AddPower(parameter.value);
                         break;
                     case EParameters.MoveSpeed:
                         player.AddMoveSpeed(parameter.value);
                         break;
                     case EParameters.Wisdom:
+                        player.AddWisdom(parameter.value);
+                        break;
+                    case EParameters.Health:
+                        player.AddHealth(parameter.value, parameter.value);
+                        break;
+                    case EParameters.Mana:
+                        player.AddMana(parameter.value, parameter.value);
+                        break;
+                    case EParameters.UltimateEnergy:
+                        player.AddUltimateEnergy(parameter.value, parameter.value);
                         break;
                 }
             }

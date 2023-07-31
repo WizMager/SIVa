@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Ecs.Game.Systems.Parameters
 {
-    public class PlayerParametersSystem
+    public class PlayerParametersSystem // this for ... what?
     {
         private readonly GameContext _game;
 
