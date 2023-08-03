@@ -23,11 +23,30 @@ namespace Assets.Scripts.Ecs.Action.Systems
         {
             foreach (var actionEntity in entities)
             {
-                var isDead = actionEntity.TakeDamage.IsTakeDamage;
-
-                _game.PlayerEntity.IsDead = isDead;
-
                 actionEntity.IsDestroyed = true;
+
+                var targetUid = actionEntity.TakeDamage.target;
+
+                var target = _game.GetEntityWithUid(targetUid);
+
+                var maxHealth = target.Health.MaxValue;
+
+                var currentHealth = target.Health.CurrentValue;
+
+                var damageWhithoutArmor = 100 * (1 + (target.Power.Value * 0.001f)); // from formula
+
+                var armorCheck = damageWhithoutArmor * (target.Armor.Value * 0.001f);
+
+                var finalDamage = damageWhithoutArmor - armorCheck;
+
+                var healtAfterDamage = currentHealth - finalDamage;
+
+                if (healtAfterDamage <= 0)
+                {
+                    target.IsDead = true;
+                    target.ReplaceHealth(maxHealth, 0);
+                }                
+                else target.ReplaceHealth(maxHealth, healtAfterDamage);
             }
         }
     }

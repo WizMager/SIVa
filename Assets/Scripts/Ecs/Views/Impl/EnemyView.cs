@@ -26,8 +26,8 @@ namespace Assets.Scripts.Ecs.Views.Impl
         {
             if (other.gameObject.layer.ToString() == "Player")
             {
-                other.transform.TryGetComponent(out IDamageable damageable);                
-                _action.CreateEntity().AddTakeDamage(true);
+                other.transform.TryGetComponent(out IDamageable damageable);              
+                _action.CreateEntity().AddTakeDamage(damageable.GetEnemyUid(), uid);
             }            
         }
 
